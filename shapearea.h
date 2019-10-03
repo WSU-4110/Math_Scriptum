@@ -13,8 +13,7 @@ public:
     ///override functions from base class needed to have the custom widget bhave accordingly
    //QSize minimumSizeHint() const Q_DECL_OVERRIDE;
    //QSize sizeHint() const Q_DECL_OVERRIDE;
-
-
+    //bug 001
 
 
 
