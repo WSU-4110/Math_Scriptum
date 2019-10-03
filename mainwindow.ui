@@ -183,15 +183,15 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>NoteArea</class>
-   <extends>QWidget</extends>
-   <header location="global">notearea.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>EquationsArea</class>
    <extends>QWidget</extends>
    <header>equationsarea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NoteArea</class>
+   <extends>QWidget</extends>
+   <header>notearea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
