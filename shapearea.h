@@ -4,9 +4,9 @@
 #include <QPainter>
 #include <math.h>
 #include <QWidget>
-#include <QWidget>
 #include <QColor>
 #include <QSize>
+
 
 
 class ShapeArea : public QWidget
@@ -17,9 +17,9 @@ class ShapeArea : public QWidget
 public:
     explicit ShapeArea(QWidget *parent = nullptr);
     ///override functions from base class needed to have the custom widget bhave accordingly
-   //QSize minimumSizeHint() const Q_DECL_OVERRIDE;
-   //QSize sizeHint() const Q_DECL_OVERRIDE;
-    //bug 001
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    //QSize sizeHint() const Q_DECL_OVERRIDE;
+
 
      enum shape_type
      {
@@ -35,7 +35,7 @@ public:
     {
         Shape = shape;
         ///to load the different user values depeinding on  the shape displayed
-        load_shape_change(); //on shape
+         load_shape_change(); //on shape
     }
 
     ///function to allow rescaleing of the shape
@@ -74,7 +74,7 @@ public:
 
     ///overriding method form base class
     /// NOT using built in override method of paintEvent
-    //protected:
+    protected:
     //void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 
