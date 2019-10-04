@@ -76,7 +76,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="NoteArea" name="NoteArea" native="true">
+   <widget class="QWidget" name="NoteArea" native="true">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -152,7 +152,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="EquationsArea" name="widget" native="true">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -180,18 +180,6 @@
    <class>ShapeArea</class>
    <extends>QWidget</extends>
    <header location="global">shapearea.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>EquationsArea</class>
-   <extends>QWidget</extends>
-   <header>equationsarea.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>NoteArea</class>
-   <extends>QWidget</extends>
-   <header>notearea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
