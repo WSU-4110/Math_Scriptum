@@ -15,7 +15,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    ///slots for the buttons created in the user interface
+private slots:
+    void on_astroid_Button_clicked();
+   void on_spinScale_valueChanged(double arg1);
+
+
 private:
     Ui::MainWindow *ui;
+private:
+    void update_UserInterface ();
 };
 #endif // MAINWINDOW_H

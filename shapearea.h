@@ -18,7 +18,7 @@ public:
     explicit ShapeArea(QWidget *parent = nullptr);
     ///override functions from base class needed to have the custom widget bhave accordingly
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
-    //QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
 
      enum shape_type
@@ -75,7 +75,7 @@ public:
     ///overriding method form base class
     /// NOT using built in override method of paintEvent
     protected:
-    //void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 
 signals:

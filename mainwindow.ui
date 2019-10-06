@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="astroid_Button">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -34,7 +34,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Astroid</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -112,7 +112,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <widget class="QDoubleSpinBox" name="spin_interval">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -122,7 +122,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+   <widget class="QDoubleSpinBox" name="scale_interval">
     <property name="geometry">
      <rect>
       <x>70</x>
