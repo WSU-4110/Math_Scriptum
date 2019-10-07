@@ -36,8 +36,20 @@ void MainWindow::on_astroid_Button_clicked()
 
 }
 
+
+
 ///function for when user clicks the spin value box to change values of the shape
 void MainWindow::on_spinScale_valueChanged(double scaler)
 {
     this->ui->Shapearea->set_scale_size(scaler);
+}
+///when the user clicks the astroid button
+void MainWindow::on_CycloidButton_clicked()
+{
+    ///set up the shape call it from the shapearea class
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Cycloid);
+    ///repaint the area
+    this->ui->Shapearea->repaint();
+    ///display the new shape
+    update_UserInterface();
 }

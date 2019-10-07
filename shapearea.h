@@ -7,7 +7,12 @@
 #include <QColor>
 #include <QSize>
 
-
+/*
+ * ALL VARIABLES SHOULD BE IN FLOATING POINT TO ENSURE CORRECT SHAPE ACCURACY
+ * EXCEPT FOR STEP COUNT FUNCTIONS
+ *
+ *
+*/
 
 class ShapeArea : public QWidget
 {
@@ -82,6 +87,8 @@ signals:
 
 public slots:
 private:
+    ///each function will have implementation to set up the shapes
+    /// please add shapes as you see fit
    QPointF drawLine(float t);
    QPointF drawAstroid(float t);
    QPointF drawCycloid(float t);
@@ -96,6 +103,7 @@ private:
 private:
    ///use Qcolor class to allow the background color to be changed
    QColor background_color;
+   ///set up the color of the shape
    QColor shape_color;
    shape_type Shape;
    float length_of_Interval;

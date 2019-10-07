@@ -86,7 +86,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="CycloidButton">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -96,7 +96,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Cycloid</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">

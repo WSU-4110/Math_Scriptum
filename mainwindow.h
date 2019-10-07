@@ -21,6 +21,8 @@ private slots:
    void on_spinScale_valueChanged(double arg1);
 
 
+   void on_CycloidButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 private:
