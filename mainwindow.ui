@@ -85,6 +85,16 @@
       <height>311</height>
      </rect>
     </property>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>-1</y>
+       <width>351</width>
+       <height>301</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="CycloidButton">
     <property name="geometry">
@@ -195,7 +205,7 @@
      <x>0</x>
      <y>0</y>
      <width>1004</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
