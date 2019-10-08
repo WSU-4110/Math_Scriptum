@@ -23,6 +23,12 @@ private slots:
 
    void on_CycloidButton_clicked();
 
+   void on_pushButton_clicked();
+
+   void on_selectSaveFileButton_clicked();
+
+   void on_createSaveFileButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 private:

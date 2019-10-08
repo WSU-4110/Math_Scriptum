@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1004</width>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -162,14 +162,40 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="selectSaveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>50</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Save File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createSaveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>110</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create Save File</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>1004</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

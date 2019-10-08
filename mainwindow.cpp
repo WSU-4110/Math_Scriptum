@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QColorDialog>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -52,4 +53,26 @@ void MainWindow::on_CycloidButton_clicked()
     this->ui->Shapearea->repaint();
     ///display the new shape
     update_UserInterface();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}
+
+void MainWindow::on_selectSaveFileButton_clicked()
+{
+    // NOT DONE
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open Save File"),
+                                                     "/home",
+                                                     tr("Document (*.docx)"));
+
+}
+
+void MainWindow::on_createSaveFileButton_clicked()
+{
+    // NOT DONE
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
+                                 "/home/jana/untitled.docx",
+                                 tr("Document (*.docx)"));
 }
