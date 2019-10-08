@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="astroid_Button">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -34,7 +34,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Astroid</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -76,7 +76,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="NoteArea" name="NoteArea" native="true">
+   <widget class="QWidget" name="NoteArea" native="true">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -86,7 +86,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="CycloidButton">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -96,7 +96,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Cycloid</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
@@ -112,7 +112,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <widget class="QDoubleSpinBox" name="spin_interval">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -122,7 +122,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+   <widget class="QDoubleSpinBox" name="scale_interval">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -152,7 +152,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="EquationsArea" name="widget" native="true">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -180,18 +180,6 @@
    <class>ShapeArea</class>
    <extends>QWidget</extends>
    <header location="global">shapearea.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>NoteArea</class>
-   <extends>QWidget</extends>
-   <header location="global">notearea.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>EquationsArea</class>
-   <extends>QWidget</extends>
-   <header>equationsarea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
