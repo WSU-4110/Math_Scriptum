@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QColorDialog>
 #include <QFileDialog>
+#include <QFile>
+#include <QMessageBox>
+#include <QTextStream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -75,4 +78,35 @@ void MainWindow::on_createSaveFileButton_clicked()
     QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
                                  "/home/jana/untitled.docx",
                                  tr("Document (*.docx)"));
+}
+
+void MainWindow::on_pasteFromFile_clicked()
+{
+        //this will be used to get multiple files to open sequencially
+    //QStringList fileNames = QFileDialog::getOpenFileNames(this, "Open the file");
+
+    ///Opens a dialog box to select a file to read into the NotePad area of the App
+    QString fileName = QFileDialog::getOpenFileName(this, "Open the file");
+
+    ///Creates a QFile object with the file name parameter
+    QFile file(fileName);
+    filePath = fileName;
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        ///Opens a message box stating that the selected file did not open properly and will return from function
+        QMessageBox::warning(this, "..","file not open");
+        return;
+    }
+
+    ///Creates an object for the text read from the selected file
+    QTextStream in(&file);
+
+    ///String object to hold the text read from the QTextStream object
+    QString inText = in.readAll();
+
+    ///points the QString object to the graphical notepad area in the main window
+    ui->textEdit->setText(inText);
+
+    ///Closes the Qfile object that the text was read from
+    file.close();
 }

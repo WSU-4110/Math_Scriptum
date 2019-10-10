@@ -29,8 +29,11 @@ private slots:
 
    void on_createSaveFileButton_clicked();
 
+   void on_pasteFromFile_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QString filePath;
 private:
     void update_UserInterface ();
 };
