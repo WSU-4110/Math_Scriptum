@@ -132,8 +132,8 @@ QPointF ShapeArea::drawCycloid(float t)
 {
     ///implement
     return QPointF(
-                1.5 * (1-cos(t)), ///x
-                1.5 * (1-sin(t)) ///y
+                2 * (1-cos(t)), ///x
+                2 * (1-sin(t)) ///y
                 );
 
 }
