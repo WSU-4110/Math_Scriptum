@@ -132,8 +132,8 @@ QPointF ShapeArea::drawCycloid(float t)
 {
     ///implement
     return QPointF(
-                2 * (1-cos(t)), ///x
-                2 * (1-sin(t)) ///y
+                1.5 * (1-cos(t)), ///x
+                1.5 * (1-sin(t)) ///y
                 );
 
 }
@@ -165,7 +165,7 @@ void ShapeArea::paintEvent(QPaintEvent *event)
     QPoint center = this->rect().center();
     ///to adjust the dotted line and make it into smooth line
     QPointF previous_point = drawGeneral(0);
-    QPoint previous_pixel;
+    QPointF previous_pixel;
     ///implicit conversion that will turn the floating numbers to a double
     previous_pixel.setX(previous_point.x() * Scale + center.x());
     previous_pixel.setY(previous_point.y() * Scale + center.y());
@@ -180,6 +180,7 @@ void ShapeArea::paintEvent(QPaintEvent *event)
         single_pixel.setY(point.y() * Scale + center.y());
         painter.drawLine(single_pixel, previous_pixel);
         // previous_pixel = single_pixel;
+        previous_pixel = single_pixel;
 
     }
 

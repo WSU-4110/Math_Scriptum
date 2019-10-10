@@ -49,10 +49,10 @@
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>10</y>
-       <width>491</width>
-       <height>361</height>
+       <width>481</width>
+       <height>431</height>
       </rect>
      </property>
     </widget>
@@ -130,13 +130,13 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>340</y>
+      <y>320</y>
       <width>151</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Paste to Notes from File</string>
+     <string>Paste From File</string>
     </property>
    </widget>
   </widget>
@@ -146,7 +146,7 @@
      <x>0</x>
      <y>0</y>
      <width>1097</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
