@@ -70,6 +70,17 @@ void MainWindow::on_selectSaveFileButton_clicked()
                                                      "/home",
                                                      tr("Document (*.docx *.txt)"));
 
+    /// SaveFile is a QFile object to check if a save file has been created by the user.
+    QFile SaveFile(fileName);
+    if (!SaveFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        /// If no save file is selected, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","No save file has been SELECTED! Until a save file is created or selected, nothing will be saved!");
+        return;
+    }
+
+    /// Savefile was not closed so the other functions should be able to write and read from it.
+    SaveFile.open(QIODevice::WriteOnly);
 }
 
 void MainWindow::on_createSaveFileButton_clicked()
@@ -78,6 +89,18 @@ void MainWindow::on_createSaveFileButton_clicked()
     QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
                                  "/home/jana/untitled.docx",
                                  tr("Document (*.docx *.txt)"));
+
+    /// SaveFile is a QFile object to check if a save file has been created by the user.
+    QFile SaveFile(fileName);
+    if (!SaveFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        /// If no save file is create, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","No save file has been CREATED! Until a save file is created or selected, nothing will be saved!");
+        return;
+    }
+
+    /// Savefile is open and not closed so the other functions should be able to write to it.
+    SaveFile.open(QIODevice::WriteOnly);
 }
 
 void MainWindow::on_pasteFromFile_clicked()
