@@ -68,7 +68,7 @@ void MainWindow::on_selectSaveFileButton_clicked()
     // NOT DONE
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open Save File"),
                                                      "/home",
-                                                     tr("Document (*.docx)"));
+                                                     tr("Document (*.docx *.txt)"));
 
 }
 
@@ -77,7 +77,7 @@ void MainWindow::on_createSaveFileButton_clicked()
     // NOT DONE
     QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
                                  "/home/jana/untitled.docx",
-                                 tr("Document (*.docx)"));
+                                 tr("Document (*.docx *.txt)"));
 }
 
 void MainWindow::on_pasteFromFile_clicked()
