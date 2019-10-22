@@ -12,8 +12,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
      this->ui->spin_interval->setValue(this->ui->Shapearea->scale());
-
-
 }
 
 MainWindow::~MainWindow()
@@ -68,7 +66,7 @@ void MainWindow::on_selectSaveFileButton_clicked()
     // NOT DONE
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open Save File"),
                                                      "/home",
-                                                     tr("Document (*.docx *.txt)"));
+                                                     tr("Document (*.docx)"));
 
     /// SaveFile is a QFile object to check if a save file has been created by the user.
     QFile SaveFile(fileName);
@@ -88,7 +86,7 @@ void MainWindow::on_createSaveFileButton_clicked()
     // NOT DONE
     QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
                                  "/home/jana/untitled.docx",
-                                 tr("Document (*.docx *.txt)"));
+                                 tr("Document (*.docx)"));
 
     /// SaveFile is a QFile object to check if a save file has been created by the user.
     QFile SaveFile(fileName);
@@ -132,4 +130,9 @@ void MainWindow::on_pasteFromFile_clicked()
 
     ///Closes the Qfile object that the text was read from
     file.close();
+}
+
+void MainWindow::on_saveProgress_clicked()
+{
+
 }

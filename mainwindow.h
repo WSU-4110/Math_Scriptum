@@ -31,6 +31,8 @@ private slots:
 
    void on_pasteFromFile_clicked();
 
+   void on_saveProgress_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
