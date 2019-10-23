@@ -153,6 +153,33 @@
     </property>
    </widget>
   </widget>
+  <widget class="QPushButton" name="LineButton">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>470</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="parabolaButton">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>520</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Parabola</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -170,6 +197,12 @@
    <class>ShapeArea</class>
    <extends>QWidget</extends>
    <header location="global">shapearea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>graphArea</class>
+   <extends>QWidget</extends>
+   <header location="global">grapharea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
