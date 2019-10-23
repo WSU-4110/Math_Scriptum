@@ -152,7 +152,6 @@
      <string>Save Progress</string>
     </property>
    </widget>
-  </widget>
   <widget class="QPushButton" name="LineButton">
     <property name="geometry">
      <rect>
@@ -192,6 +191,7 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+</widget>
  <customwidgets>
   <customwidget>
    <class>ShapeArea</class>
