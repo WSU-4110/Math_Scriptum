@@ -93,7 +93,8 @@ void MainWindow::on_selectSaveFileButton_clicked()
     {
         /// Add the line that was read to FileContent.
         FileContent.append(line);
-
+        /// Endl line
+        FileContent.append("\n");
         /// Read the next line in the file.
         line = in.readLine();
     }
