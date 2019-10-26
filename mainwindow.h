@@ -33,6 +33,8 @@ private slots:
 
    void on_saveProgress_clicked();
 
+   void on_saveImage_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
