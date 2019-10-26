@@ -187,6 +187,9 @@ void MainWindow::on_saveProgress_clicked()
         return;
     }
 
+    /// Clear the save file.
+    SaveFile.resize(0);
+
     /// A QTextStream object called out is used to write to the selected save file.
     QTextStream out(&SaveFile);
 
