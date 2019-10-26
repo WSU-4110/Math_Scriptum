@@ -82,32 +82,25 @@ void MainWindow::on_selectSaveFileButton_clicked()
     /// A QTextStream object called out is used to read from the selected save file.
     QTextStream in(&SaveFile);
 
-    /// A QString object called line is used to read the first line of text.
-    QString line = in.readLine();
+    /// A QString object called FileContent is used to hold all the lines that were read from the file.
+    QString FileContent = in.readAll();
 
-    /// A QString object called FileContent is used to hold all the lines that were read.
-    QString FileContent;
-
-    /// As long as there are lines in the file (end of file not reached), do the following.
-    while(!line.isNull())
+    if (FileContent.isNull())
     {
-        /// Add the line that was read to FileContent.
-        FileContent.append(line);
-        /// Endl line
-        FileContent.append("\n");
-        /// Read the next line in the file.
-        line = in.readLine();
+        /// If the text file is empty, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","The file is empty!");
+    }
+    else
+    {
+        /// Clear the Graphical Notepad in the main window
+        ui->textEdit->clear();
+
+        /// Add all the information from the selected file to Graphical Notepad in the main window
+        ui->textEdit->setPlainText(FileContent);
     }
 
     /// SaveFile is closed.
     SaveFile.close();
-
-    /// Clear the Graphical Notepad in the main window
-    ui->textEdit->clear();
-
-    /// Add all the information from the selected file to Graphical Notepad in the main window
-    ui->textEdit->setPlainText(FileContent);
-
 }
 
 void MainWindow::on_createSaveFileButton_clicked()
