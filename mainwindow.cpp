@@ -198,5 +198,23 @@ void MainWindow::on_saveProgress_clicked()
 
 void MainWindow::on_saveImage_clicked()
 {
+    /// A QString object called path is where the sheape will be saved to as a png file.
+    QString path = QFileDialog::getSaveFileName(this, tr("Save as image"), "/home/jana/shapes/untitled.png", tr("PNG (*.png)"));
 
+    if (path.isEmpty())
+    {
+        /// If path is empty then this message will warn the user.
+        QMessageBox::warning(this, "Warning!","No save file location (path) created! Shape will not be saved!");
+        return;
+    }
+
+    /// A QImage object called img is referencing the shape area.
+    QImage img(this->ui->Shapearea->size(), QImage::Format_ARGB32);
+
+    /// Getting the content/image that is to be saved.
+    QPainter painter(&img);
+    this->render(&painter);
+
+    /// Save the png image at the location (path) selected previously.
+    img.save(path);
 }
