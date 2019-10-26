@@ -85,19 +85,11 @@ void MainWindow::on_selectSaveFileButton_clicked()
     /// A QString object called FileContent is used to hold all the lines that were read from the file.
     QString FileContent = in.readAll();
 
-    if (FileContent.isNull())
-    {
-        /// If the text file is empty, then this a message will pop up to warn the user.
-        QMessageBox::warning(this, "Warning!","The file is empty!");
-    }
-    else
-    {
-        /// Clear the Graphical Notepad in the main window
-        ui->textEdit->clear();
+    /// Clear the Graphical Notepad in the main window
+    ui->textEdit->clear();
 
-        /// Add all the information from the selected file to Graphical Notepad in the main window
-        ui->textEdit->setPlainText(FileContent);
-    }
+    /// Add all the information from the selected file to Graphical Notepad in the main window
+    ui->textEdit->setPlainText(FileContent);
 
     /// SaveFile is closed.
     SaveFile.close();
@@ -139,7 +131,7 @@ void MainWindow::on_pasteFromFile_clicked()
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         ///Opens a message box stating that the selected file did not open properly and will return from function
-        QMessageBox::warning(this, "..","file not open");
+        QMessageBox::warning(this, "Warning!","File not open!");
         return;
     }
 
@@ -149,8 +141,16 @@ void MainWindow::on_pasteFromFile_clicked()
     ///String object to hold the text read from the QTextStream object
     QString inText = in.readAll();
 
-    ///points the QString object to the graphical notepad area in the main window
-    ui->textEdit->setText(inText);
+    if (inText.isNull())
+    {
+        /// If the text file is empty, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","The file is empty!");
+    }
+    else
+    {
+        ///points the QString object to the graphical notepad area in the main window
+        ui->textEdit->setText(inText);
+    }
 
     ///Closes the Qfile object that the text was read from
     file.close();
