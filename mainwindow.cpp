@@ -161,3 +161,42 @@ void MainWindow::on_pasteFromFile_clicked()
     ///Closes the Qfile object that the text was read from
     file.close();
 }
+
+
+void MainWindow::on_saveProgress_clicked()
+{
+    /// Get the file path (location) of the save file.
+    QString filename = filePath;
+
+    /// If no save file is set, then this message will warn the user.
+    if (filename.isEmpty())
+    {
+        QMessageBox::warning(this, "Warning!","No save file has been set! Until a save file is created OR selected, nothing can be saved!");
+        return;
+    }
+
+    /// SaveFile is a QFile object to check if a save file has been created by the user.
+    QFile SaveFile(filename);
+
+    /// Open the file
+    if ( !SaveFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
+    {
+        /// If the file failed to open, then this message will warn the user.
+        QMessageBox::warning(this, "Warning!","Save file failed to open! Select or Create a save file and then try again!");
+        return;
+    }
+
+    /// A QTextStream object called out is used to write to the selected save file.
+    QTextStream out(&SaveFile);
+
+    /// Everything in the Graphical notepad area is saved as plain text.
+    out << ui->textEdit->toPlainText() << "\n";
+
+    /// SaveFile is closed.
+    SaveFile.close();
+}
+
+void MainWindow::on_saveImage_clicked()
+{
+
+}
