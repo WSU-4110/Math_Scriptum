@@ -64,9 +64,7 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_selectSaveFileButton_clicked()
 {
     /// The user selects the location (path) of the save file to open.
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open Save File"),
-                                                     "/home",
-                                                     tr("Document (*.txt)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open Save File"), "/home", tr("Text (*.txt)"));
 
     /// SaveFile is a QFile object to check if a save file has been created by the user.
     QFile SaveFile(fileName);
@@ -81,16 +79,40 @@ void MainWindow::on_selectSaveFileButton_clicked()
     /// The file path (location) of the save file is set.
     filePath = fileName;
 
+    /// A QTextStream object called out is used to read from the selected save file.
+    QTextStream in(&SaveFile);
+
+    /// A QString object called line is used to read the first line of text.
+    QString line = in.readLine();
+
+    /// A QString object called FileContent is used to hold all the lines that were read.
+    QString FileContent;
+
+    /// As long as there are lines in the file (end of file not reached), do the following.
+    while(!line.isNull())
+    {
+        /// Add the line that was read to FileContent.
+        FileContent.append(line);
+
+        /// Read the next line in the file.
+        line = in.readLine();
+    }
+
     /// SaveFile is closed.
     SaveFile.close();
+
+    /// Clear the Graphical Notepad in the main window
+    ui->textEdit->clear();
+
+    /// Add all the information from the selected file to Graphical Notepad in the main window
+    ui->textEdit->setPlainText(FileContent);
+
 }
 
 void MainWindow::on_createSaveFileButton_clicked()
 {
     /// The location (path) of the save file is set.
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"),
-                                 "/home/jana/untitled.txt",
-                                 tr("Document (*.txt)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"), "/home/jana/untitled.txt", tr("Text (*.txt)"));
 
     /// SaveFile is a QFile object to check if a save file has been created by the user.
     QFile SaveFile(fileName);
@@ -138,37 +160,4 @@ void MainWindow::on_pasteFromFile_clicked()
 
     ///Closes the Qfile object that the text was read from
     file.close();
-}
-
-void MainWindow::on_saveProgress_clicked()
-{
-    /// Get the file path (location) of the save file.
-    QString filename = filePath;
-
-    /// If no save file is set, then this message will warn the user.
-    if (filename.isEmpty())
-    {
-        QMessageBox::warning(this, "Warning!","No save file has been set! Until a save file is created OR selected, nothing can be saved!");
-        return;
-    }
-
-    /// SaveFile is a QFile object to check if a save file has been created by the user.
-    QFile SaveFile(filename);
-
-    /// Open the file
-    if ( !SaveFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
-    {
-        /// If the file failed to open, then this message will warn the user.
-        QMessageBox::warning(this, "Warning!","Save file failed to open! Select or Create a save file and then try again!");
-        return;
-    }
-
-    /// out is a QTextStream object to write to the selected save file.
-    QTextStream out(&SaveFile);
-
-    /// Everything in the Graphical notepad area is saved as plain text.
-    out << ui->textEdit->toPlainText() << "\n";
-
-    /// SaveFile is closed.
-    SaveFile.close();
 }
