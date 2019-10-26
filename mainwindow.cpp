@@ -38,8 +38,6 @@ void MainWindow::on_astroid_Button_clicked()
 
 }
 
-
-
 ///function for when user clicks the spin value box to change values of the shape
 void MainWindow::on_spinScale_valueChanged(double scaler)
 {
@@ -123,7 +121,7 @@ void MainWindow::on_pasteFromFile_clicked()
     //QStringList fileNames = QFileDialog::getOpenFileNames(this, "Open the file");
 
     ///Opens a dialog box to select a file to read into the NotePad area of the App
-    QString fileName = QFileDialog::getOpenFileName(this, "Open the file");
+    QString fileName = QFileDialog::getOpenFileName(this, "Open the file", "/home", tr("Text (*.txt)"));
 
     ///Creates a QFile object with the file name parameter
     QFile file(fileName);
@@ -155,7 +153,6 @@ void MainWindow::on_pasteFromFile_clicked()
     ///Closes the Qfile object that the text was read from
     file.close();
 }
-
 
 void MainWindow::on_saveProgress_clicked()
 {
