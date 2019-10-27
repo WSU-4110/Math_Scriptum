@@ -48,6 +48,16 @@ private slots:
 
    void on_huyg_Button_clicked();
 
+   void on_line_Button_clicked();
+
+   void on_sScale_valueChanged(const QString &arg1);
+
+   void on_sScale_valueChanged(double arg1);
+
+   void on_sInterval_valueChanged(double arg1);
+
+   void on_sCount_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     QString filePath;

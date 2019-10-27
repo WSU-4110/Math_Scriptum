@@ -9,6 +9,7 @@
 ShapeArea::ShapeArea(QWidget *parent) : QWidget(parent),
     background_color(0,0,255),
     shape_color(255,255,255),
+    pen(Qt::white),
     Shape(Astroid)
 {
     load_shape_change();
@@ -16,11 +17,11 @@ ShapeArea::ShapeArea(QWidget *parent) : QWidget(parent),
 
 QSize ShapeArea::minimumSizeHint() const
 {
-    return QSize(500, 500);
+    return QSize(400, 400);
 }
 QSize ShapeArea::sizeHint() const
 {
-    return QSize(399,399);
+    return QSize(400,400);
 }
 ///when user hits a button this switch statemnt will execute and call
 /// what the user chose
@@ -48,6 +49,18 @@ QPointF ShapeArea::drawGeneral(float t)
     case Line:
         return drawLine(t);
         break;
+    case Ellipse:
+        return drawEllipse(t);
+        break;
+    case hexagon:
+        return drawHexagon(t);
+        break;
+    case Lines:
+        return drawLines(t);
+        break;
+    case General:
+        return drawGeneral(t);
+        break;
 
 
     default:
@@ -64,13 +77,13 @@ void ShapeArea::load_shape_change()
     switch(Shape)
     {
     case Astroid:
-            Scale = 50;
+            Scale = 100;
             length_of_Interval = 2 * M_PI;
-            step_count_of_shape = 103; //mstepcount
+            step_count_of_shape = 255; //mstepcount
         break;
     case Cycloid:
-        Scale = 60;
-        length_of_Interval = 6 * M_PI;
+        Scale = 30;
+        length_of_Interval = 4 * M_PI;
         step_count_of_shape = 128;
         break;
     case Huygens:
@@ -79,21 +92,21 @@ void ShapeArea::load_shape_change()
         step_count_of_shape = 255;
         break;
     case Hype:
-        Scale = 16;
-        length_of_Interval = 2 * M_PI;
+        Scale = 10;
+        length_of_Interval = 4 * M_PI;
         step_count_of_shape =  255;
         break;
    case Circle:
-        Scale = 7;
-        length_of_Interval = 3 * M_PI;
-        step_count_of_shape = 255;
+        Scale = 165;
+        length_of_Interval = 2 * M_PI;
+        step_count_of_shape = 139;
         break;
    case Line:
         Scale = 15;
-        length_of_Interval = 1;
+        length_of_Interval = 2;
         step_count_of_shape = 129;
         break;
-   case triangle:
+   case Ellipse:
         Scale = 10;
         length_of_Interval = 3 * M_PI;
         step_count_of_shape = 225;
@@ -103,6 +116,7 @@ void ShapeArea::load_shape_change()
         length_of_Interval = 5 * M_PI;
         step_count_of_shape = 234;
         break;
+
 
 
     default:
@@ -125,6 +139,7 @@ QPointF ShapeArea::drawAstroid(float t)
 QPointF ShapeArea::drawHypo(float t)
 {
     ///imnplemenmt
+    return QPointF (1.5 * (2* cos(t) + cos(2*t)), 4 * (3*sin(t) - sin(3*t)));
 }
 
 QPointF ShapeArea::drawLine(float t)
@@ -135,6 +150,7 @@ QPointF ShapeArea::drawLine(float t)
 QPointF ShapeArea::drawCircle(float t)
 {
     ///implement
+    return QPointF (cos(t),sin(t));
 
 }
 
@@ -143,7 +159,7 @@ QPointF ShapeArea::drawCycloid(float t)
     ///implement
     return QPointF(
                 1.5 * (1-cos(t)), ///x
-                1.5 * (1-sin(t)) ///y
+                1.5 * (t-sin(t)) ///y
                 );
 
 }
@@ -151,12 +167,14 @@ QPointF ShapeArea::drawCycloid(float t)
 QPointF ShapeArea::drawHuygens(float t)
 {
     ///implement
+    return QPointF (4*(3*cos(t)-cos(3*t)),4*(3*sin(t)-sin(3*t)));
 
 }
 
 QPointF ShapeArea::drawLines(float t)
 {
     ///implement
+    return QPointF ( 1-t,1-t);
 
 }
 
@@ -167,6 +185,9 @@ QPointF ShapeArea::drawHexagon(float t)
 
 QPointF ShapeArea::drawEllipse(float t)
 {
+    float edge1 = 2;
+    float edge2 = 1;
+    return QPointF(edge1*cos(t), edge2*sin(t));
 
 }
 

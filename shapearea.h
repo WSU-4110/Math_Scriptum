@@ -35,7 +35,9 @@ public:
          Huygens,
          Circle,
          Ellipse,
-         hexagon
+         hexagon,
+         Lines,
+         General
      };
      ///All setters anbd getters class functions to draw 2D shapes in the shape area window
     void set_up_Shape(shape_type shape)
@@ -44,12 +46,17 @@ public:
         ///to load the different user values depeinding on  the shape displayed
          load_shape_change(); //on shape
     }
+    shape_type shape () const
+    {
+        return Shape;
+    }
 
     ///function to allow rescaleing of the shape
     void set_scale_size(float scale)
     {
         Scale = scale;
         //repaint function here declare only no body
+        repaint();
     }
     float scale () const
     {
@@ -61,6 +68,7 @@ public:
     {
         step_count_of_shape = count;
         //repaint functiuon here
+        repaint();
     }
     int step_counter() const
     {
@@ -72,6 +80,7 @@ public:
     {
         length_of_Interval = length;
         //painmt function
+        repaint();
     }
     float length() const
     {
@@ -109,6 +118,8 @@ private:
    QColor background_color;
    ///set up the color of the shape
    QColor shape_color;
+
+   QPen pen;
    shape_type Shape;
    float length_of_Interval;
    float Scale;

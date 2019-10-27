@@ -70,7 +70,7 @@
      <string>Cycloid</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="spin_interval">
+   <widget class="QDoubleSpinBox" name="sInterval">
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -80,7 +80,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="scale_interval">
+   <widget class="QDoubleSpinBox" name="sScale">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -152,7 +152,7 @@
      <string>Save Progress</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="sCount">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -305,6 +305,19 @@
      <string>huygens</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="line_Button">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>320</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lines</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -312,7 +325,7 @@
      <x>0</x>
      <y>0</y>
      <width>1097</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
