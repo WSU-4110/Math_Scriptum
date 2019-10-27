@@ -93,6 +93,16 @@ void ShapeArea::load_shape_change()
         length_of_Interval = 1;
         step_count_of_shape = 129;
         break;
+   case triangle:
+        Scale = 10;
+        length_of_Interval = 3 * M_PI;
+        step_count_of_shape = 225;
+        break;
+   case hexagon:
+        Scale = 12;
+        length_of_Interval = 5 * M_PI;
+        step_count_of_shape = 234;
+        break;
 
 
     default:
@@ -149,6 +159,17 @@ QPointF ShapeArea::drawLines(float t)
     ///implement
 
 }
+
+QPointF ShapeArea::drawHexagon(float t)
+{
+
+}
+
+QPointF ShapeArea::drawEllipse(float t)
+{
+
+}
+
 
 
 ///main function of the shape area class

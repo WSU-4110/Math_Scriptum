@@ -33,7 +33,9 @@ public:
          Cycloid,
          Hype,
          Huygens,
-         Circle
+         Circle,
+         Ellipse,
+         hexagon
      };
      ///All setters anbd getters class functions to draw 2D shapes in the shape area window
     void set_up_Shape(shape_type shape)
@@ -97,6 +99,8 @@ private:
    QPointF drawCircle(float t);
    QPointF drawLines(float t);
    QPointF drawGeneral(float t);
+   QPointF drawEllipse(float t);
+   QPointF drawHexagon(float t);
    void load_shape_change();
 
 

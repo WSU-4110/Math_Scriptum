@@ -136,3 +136,36 @@ void MainWindow::on_saveProgress_clicked()
 {
 
 }
+
+void MainWindow::on_circle_Button_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_hexagon_Button_clicked()
+{
+
+}
+
+void MainWindow::on_ellipse_Button_clicked()
+{
+
+}
+
+
+void MainWindow::on_invertedCircle_Button_clicked()
+{
+
+}
+
+void MainWindow::on_hypo_Button_clicked()
+{
+
+}
+
+void MainWindow::on_huyg_Button_clicked()
+{
+
+}

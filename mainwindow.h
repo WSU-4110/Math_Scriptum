@@ -33,6 +33,21 @@ private slots:
 
    void on_saveProgress_clicked();
 
+   void on_circle_Button_clicked();
+
+
+
+   void on_hexagon_Button_clicked();
+
+   void on_ellipse_Button_clicked();
+
+
+   void on_invertedCircle_Button_clicked();
+
+   void on_hypo_Button_clicked();
+
+   void on_huyg_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
