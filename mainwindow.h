@@ -23,7 +23,7 @@ private slots:
 
    void on_CycloidButton_clicked();
 
-   void on_pushButton_clicked();
+   //void on_pushButton_clicked();
 
    void on_selectSaveFileButton_clicked();
 
@@ -50,7 +50,7 @@ private slots:
 
    void on_line_Button_clicked();
 
-   void on_sScale_valueChanged(const QString &arg1);
+   //void on_sScale_valueChanged(const QString &arg1);
 
    void on_sScale_valueChanged(double arg1);
 

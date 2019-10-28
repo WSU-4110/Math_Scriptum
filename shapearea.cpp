@@ -17,11 +17,11 @@ ShapeArea::ShapeArea(QWidget *parent) : QWidget(parent),
 
 QSize ShapeArea::minimumSizeHint() const
 {
-    return QSize(400, 400);
+    return QSize(700, 700);
 }
 QSize ShapeArea::sizeHint() const
 {
-    return QSize(400,400);
+     return QSize(700,700);
 }
 ///when user hits a button this switch statemnt will execute and call
 /// what the user chose

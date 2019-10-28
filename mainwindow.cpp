@@ -11,7 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // this->ui->sInterval->setValue(this->ui->Shapearea->scale());
+     this->ui->sInterval->setValue(this->ui->Shapearea->length());
+     this->ui->sScale->setValue(this->ui->Shapearea->scale());
+
 }
 
 MainWindow::~MainWindow()
@@ -45,7 +47,7 @@ void MainWindow::on_astroid_Button_clicked()
 ///function for when user clicks the spin value box to change values of the shape
 void MainWindow::on_spinScale_valueChanged(double scaler)
 {
-    this->ui->Shapearea->set_scale_size(scaler);
+
 }
 ///when the user clicks the astroid button
 void MainWindow::on_CycloidButton_clicked()
@@ -58,10 +60,7 @@ void MainWindow::on_CycloidButton_clicked()
     update_UserInterface();
 }
 
-void MainWindow::on_pushButton_clicked()
-{
 
-}
 
 void MainWindow::on_selectSaveFileButton_clicked()
 {
