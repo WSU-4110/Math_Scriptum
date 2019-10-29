@@ -33,6 +33,7 @@ private slots:
 
    void on_saveProgress_clicked();
 
+
    void on_circle_Button_clicked();
 
 
@@ -57,6 +58,8 @@ private slots:
    void on_sInterval_valueChanged(double arg1);
 
    void on_sCount_valueChanged(int arg1);
+
+   void on_saveImage_clicked();
 
 private:
     Ui::MainWindow *ui;
