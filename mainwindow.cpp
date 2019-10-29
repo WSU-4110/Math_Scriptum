@@ -12,7 +12,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-     this->ui->spin_interval->setValue(this->ui->Shapearea->scale());
+     this->ui->sInterval->setValue(this->ui->Shapearea->length());
+     this->ui->sScale->setValue(this->ui->Shapearea->scale());
+
 }
 
 MainWindow::~MainWindow()
@@ -21,7 +23,9 @@ MainWindow::~MainWindow()
 }
 void MainWindow::update_UserInterface()
 {
-
+    this->ui->sCount->setValue(this->ui->Shapearea->step_counter());
+    this->ui->sScale->setValue(this->ui->Shapearea->scale());
+    this->ui->sInterval->setValue(this->ui->Shapearea->length());
 }
 
 ///when the user clicks on the astroid button
@@ -42,7 +46,7 @@ void MainWindow::on_astroid_Button_clicked()
 ///function for when user clicks the spin value box to change values of the shape
 void MainWindow::on_spinScale_valueChanged(double scaler)
 {
-    this->ui->Shapearea->set_scale_size(scaler);
+
 }
 ///when the user clicks the astroid button
 void MainWindow::on_CycloidButton_clicked()
@@ -55,10 +59,7 @@ void MainWindow::on_CycloidButton_clicked()
     update_UserInterface();
 }
 
-void MainWindow::on_pushButton_clicked()
-{
 
-}
 
 void MainWindow::on_selectSaveFileButton_clicked()
 {
@@ -215,6 +216,7 @@ void MainWindow::on_saveImage_clicked()
 }
 
 
+
 void MainWindow::on_limitsButton_clicked()
 {
     QMessageBox::information(this, "Limits", "Definition: \n\nLet f be a function defined on some open interval that contains the number a, except possibly at a itself. We say the limit of f(x) as x approaches a is L, and we write lim f(x) as x -> a = L if for every number epsilon > 0 there is a corresponding number theta > 0 such that |f(x)-L| < epsilon whenever 0 < |x-a| < delta \n\nLeft-Hand [or Right-Hand] Limit: \n\nLet f be a function defined on some open interval (b,a) [or (a,b)]. We say the left-hand [or right-hand] limit of f(x) as x approaches a is L, (or the limit of f(x) as x approaches a from the left [or right] is L) and we write lim x->a- f(x) = L[lim x->a+ f(x) = L] if for every number epsilon > 0 there is a corresponding number delta > 0 such that |f(x)-L| < epsilon whenever a-epsilon < x < a[a < x < a + epsilon] ");
@@ -234,4 +236,71 @@ void MainWindow::on_integralsButton_clicked()
 
 
     return;
+
+void MainWindow::on_circle_Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Circle);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+
+void MainWindow::on_hexagon_Button_clicked()
+{
+this->ui->Shapearea->set_up_Shape(ShapeArea::hexagon);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_ellipse_Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Ellipse);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+void MainWindow::on_invertedCircle_Button_clicked()
+{
+
+}
+
+void MainWindow::on_hypo_Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Hype);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_huyg_Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Huygens);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_line_Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Lines);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+
+}
+
+
+void MainWindow::on_sScale_valueChanged(double scale)
+{
+   this->ui->Shapearea->set_scale_size(scale);
+}
+
+void MainWindow::on_sInterval_valueChanged(double scale)
+{
+    this->ui->Shapearea->set_length_of_shape(scale);
+}
+
+void MainWindow::on_sCount_valueChanged(int counter)
+{
+    this->ui->Shapearea->set_step_counter(counter);
+
 }
