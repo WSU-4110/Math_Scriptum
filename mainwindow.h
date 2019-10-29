@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QList>
+#include <QListWidgetItem>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -60,6 +63,12 @@ private slots:
    void on_sCount_valueChanged(int arg1);
 
    void on_saveImage_clicked();
+
+   void on_limitsButton_clicked();
+
+   void on_derivativesButton_clicked();
+
+   void on_integralsButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QTextStream>
+#include <QListWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -214,6 +215,28 @@ void MainWindow::on_saveImage_clicked()
     img.save(path);
 }
 
+
+
+void MainWindow::on_limitsButton_clicked()
+{
+    QMessageBox::information(this, "Limits", "Definition: \n\nLet f be a function defined on some open interval that contains the number a, except possibly at a itself. We say the limit of f(x) as x approaches a is L, and we write lim f(x) as x -> a = L if for every number epsilon > 0 there is a corresponding number theta > 0 such that |f(x)-L| < epsilon whenever 0 < |x-a| < delta \n\nLeft-Hand [or Right-Hand] Limit: \n\nLet f be a function defined on some open interval (b,a) [or (a,b)]. We say the left-hand [or right-hand] limit of f(x) as x approaches a is L, (or the limit of f(x) as x approaches a from the left [or right] is L) and we write lim x->a- f(x) = L[lim x->a+ f(x) = L] if for every number epsilon > 0 there is a corresponding number delta > 0 such that |f(x)-L| < epsilon whenever a-epsilon < x < a[a < x < a + epsilon] ");
+    return;
+}
+
+void MainWindow::on_derivativesButton_clicked()
+{
+    QMessageBox::information(this, "Derivatives", "Definition of the derivative: \n\nThe derivative of f(x) with respect to x is the function f'(x) and is defined as, f'x = lim h->0 (f(x+h)-f(x))/h \n\nDefinition: \n\nA function f(x)  is called differentiable at x =a if f'(a) exists and f(x) is called differentiable on an interval if the derivative exists for each point in that interval. \n\nTheorem: \n\nIf f(x) is differentiable at x = a then f(x) is continuous at x = a");
+    return;
+}
+
+
+void MainWindow::on_integralsButton_clicked()
+{
+    QMessageBox::information(this, "Integrals", "Definition of the definite integral: \n\nGiven a function f(x) that is continuous on the interval [a,b] we divide the interval into n subintervals of equal width, Δx, and from each interval choose a point, x sub i *. Then the definite integral of f(x) from a to b is ∫ a->b f(x)dx = lim n->∞ ∑ i=1 to n f(x sub i *) Δx \n\nProperties: \n\n1.) ∫ a->b f(x)dx = -∫ b->a f(x)dx We can interchange the limits on any definite integral, all that we need to do is tack a minus sign onto the integral when we do. \n\n2.) ∫ a->a f(x)dx = 0 If the upper and lower limits are the same then there is no work to do, the integral is zero. \n\n3.) ∫ a->b cf(x)dx = c ∫ a->b f(x)dx, where c is any number. So, as with limits, derivatives, and indefinite integrals we can factor out a constant. \n\n4.) ∫ a->b f(x)dx +/- g(x)dx = ∫ a->b f(x)dx +/- ∫ a->b g(x)dx. We can break up definite integrals across a sum or difference. \n\n5.) ∫ a->b f(x)dx = ∫ a->c f(x)dx + ∫ c->b f(x)dx where c is any number. This property is more important than we might realize at first. One of the main uses of this property is to tell us how we can integrate a function over the adjacent intervals, [a,c] and [c,b]. Note however that c doesn’t need to be between a and b. \n\n6.) ∫ a->b f(x)dx = ∫ a->b f(t)dt. The point of this property is to notice that as long as the function and limits are the same the variable of integration that we use in the definite integral won’t affect the answer.");
+
+
+    return;
+
 void MainWindow::on_circle_Button_clicked()
 {
     this->ui->Shapearea->set_up_Shape(ShapeArea::Circle);
@@ -279,4 +302,5 @@ void MainWindow::on_sInterval_valueChanged(double scale)
 void MainWindow::on_sCount_valueChanged(int counter)
 {
     this->ui->Shapearea->set_step_counter(counter);
+
 }
