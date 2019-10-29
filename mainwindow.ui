@@ -202,15 +202,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-
-      <x>450</x>
-      <y>370</y>
-      <width>101</width>
+      <x>0</x>
+      <y>10</y>
+      <width>283</width>
       <height>41</height>
-
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -249,8 +247,8 @@
    <widget class="QPushButton" name="saveImage">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>420</y>
+      <x>460</x>
+      <y>550</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -266,7 +264,7 @@
      <x>0</x>
      <y>0</y>
      <width>1097</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMathScriptum">
