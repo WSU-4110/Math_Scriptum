@@ -23,7 +23,7 @@ private slots:
 
    void on_CycloidButton_clicked();
 
-   void on_pushButton_clicked();
+   //void on_pushButton_clicked();
 
    void on_selectSaveFileButton_clicked();
 
@@ -32,6 +32,32 @@ private slots:
    void on_pasteFromFile_clicked();
 
    void on_saveProgress_clicked();
+
+
+   void on_circle_Button_clicked();
+
+
+
+   void on_hexagon_Button_clicked();
+
+   void on_ellipse_Button_clicked();
+
+
+   void on_invertedCircle_Button_clicked();
+
+   void on_hypo_Button_clicked();
+
+   void on_huyg_Button_clicked();
+
+   void on_line_Button_clicked();
+
+   //void on_sScale_valueChanged(const QString &arg1);
+
+   void on_sScale_valueChanged(double arg1);
+
+   void on_sInterval_valueChanged(double arg1);
+
+   void on_sCount_valueChanged(int arg1);
 
    void on_saveImage_clicked();
 
