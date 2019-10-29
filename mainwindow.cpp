@@ -149,7 +149,9 @@ void MainWindow::on_circle_Button_clicked()
 
 void MainWindow::on_hexagon_Button_clicked()
 {
-
+this->ui->Shapearea->set_up_Shape(ShapeArea::hexagon);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
 }
 
 void MainWindow::on_ellipse_Button_clicked()

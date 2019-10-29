@@ -180,6 +180,16 @@ QPointF ShapeArea::drawLines(float t)
 
 QPointF ShapeArea::drawHexagon(float t)
 {
+    float cos_t = cos(t);
+    float sin_t = sin(t);
+
+    float theta_t = 1.186822;
+
+    float x = 2*cos(theta_t) * ((cos(M_PI/5)/cos((2*M_PI/5) * (theta_t/(2*theta_t/5) - (theta_t/(2*theta_t/5))) - M_PI)));
+    float y = 2*sin(theta_t) * ((cos(M_PI/5)/cos((2*M_PI/5) * (theta_t/(2*theta_t/5) - (theta_t/(2*theta_t/5))) - M_PI)));
+
+    return QPointF(x,y);
+
 
 }
 
