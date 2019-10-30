@@ -281,9 +281,9 @@ void MainWindow::on_sCount_valueChanged(int counter)
     this->ui->Shapearea->set_step_counter(counter);
 }
 
-void MainWindow::on_LineButton_clicked()
+void MainWindow::on_lineButton_clicked()
 {
-    this->ui->equationsArea->set_up_Graph(EquationsArea::Parabola);
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Line);
    this->ui->equationsArea->repaint();
    update_UserInterface();
 }

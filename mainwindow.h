@@ -61,7 +61,7 @@ private slots:
 
    void on_saveImage_clicked();
 
-   void on_LineButton_clicked();
+   void on_lineButton_clicked();
 
    void on_parabolaButton_clicked();
 
