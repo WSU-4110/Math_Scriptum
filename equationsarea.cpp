@@ -1,157 +1,135 @@
 #include "equationsarea.h"
 
 EquationsArea::EquationsArea(QWidget *parent) : QWidget(parent),
-  background_color(255,255,255),
-      graph_color(0,0,0),
-      Graph(Line)
-  {
+    background_color(255,255,255),
+    graph_color(0,0,0),
+    Graph(Line)
+{
       load_graph_change();
-  }
+}
 
-  QPointF EquationsArea::drawGeneral(float t)
-  {
-      switch (Graph)
-      {
-      case Line:
-          return drawLine(t);
-          break;
+QPointF EquationsArea::drawGeneral(float t)
+{
+    ///break statements have been removed since each case returns a QPointF function
+    switch (Graph)
+    {
+        case Line:
+            return drawLine(t);
+        case Parabola:
+            return drawParabola(t);
+        case Sqrt:
+            return drawSQRT(t);
+        case XReciprical:
+            return drawXReciprical(t);
+        default:
+            return QPointF(0,0);
+    }
+}
 
-      case Parabola:
-          return drawParabola(t);
-          break;
-      case Sqrt:
-          return drawSQRT(t);
-          break;
+void EquationsArea::load_graph_change()
+{
+    Scale = 50;
+    length_of_Interval = 50;
+    step_count_of_shape = 2500;
+}
 
-      case XReciprical:
-          return drawXReciprical(t);
-          break;
-      default:
-          return QPointF(0,0);
-      }
-  }
+///The slope is negative to represent a line with positive slope. Not sure why but works
+QPointF EquationsArea::drawLine(float t)
+{
+    float slope = -1.0;
+    float yIntercept = 0;
+    float x = t;
+    float y = slope * x + yIntercept;
+    return QPointF(x, y);
+}
 
-  void EquationsArea::load_graph_change()
-  {
-      Scale = 50;
-      length_of_Interval = 50;
-      step_count_of_shape = 2500;
-  }
+QPointF EquationsArea::drawParabola(float t)
+{
+    float x = t;
+    float y = -x * x;
+    return QPointF(x, y);
+}
 
-  QPointF EquationsArea::drawLine(float t)
-  {
-      degreeEven =0;
-      float slope = -1.0;
-      float yIntercept = 0;
-      float x = t;
-      float y = slope * x + yIntercept;
-      return QPointF(x, y);
-  }
+QPointF EquationsArea::drawSQRT(float t)
+{
+    float x = t;
+    float y = -sqrt(x);
+    return QPointF(x, y);
+}
 
-  QPointF EquationsArea::drawParabola(float t)
-  {
+QPointF EquationsArea::drawXReciprical(float t)
+{
+    float x = t;
+    float y = -1/x;
+    return QPointF(x, y);
+}
 
-      float x = t;
-      float y = -x * x;
-      return QPointF(x, y);
-  }
+QPointF EquationsArea::drawXAxis(float t)
+{
+    float x = t;
+    return QPointF(x, 0);
+}
 
-  QPointF EquationsArea::drawSQRT(float t)
-  {
-      degreeEven =0;
+QPointF EquationsArea::drawYAxis(float t)
+{
+    float y = t;
+    return QPointF(0, y);
+}
 
-      float x = t;
-      float y = -sqrt(x);
-      return QPointF(x, y);
-  }
+void EquationsArea::paintEvent(QPaintEvent *event)
+{
+    float step = length_of_Interval / step_count_of_shape;
+    QPainter painter(this); ///calling "this"
+    painter.setRenderHint(QPainter::Antialiasing, true); ///prevents liasing
+    painter.setBrush(background_color);
+    painter.setPen(graph_color);
+    painter.drawRect(this->rect());
+    QPoint center = this->rect().center();
 
-  QPointF EquationsArea::drawXReciprical(float t)
-  {
+    ///to adjust the dotted line and make it into smooth line
+    QPointF previous_point = drawGeneral(0);
+    QPointF previous_pixel;
 
-      float x = t;
-      float y = -1/x;
-      return QPointF(x, y);
-  }
-  QPointF EquationsArea::drawXAxis(float t)
-  {
+    ///implicit conversion that will turn the floating numbers to a double
+    previous_pixel.setX(previous_point.x() * Scale + center.x());
+    previous_pixel.setY(previous_point.y() * Scale + center.y());
 
-      float x = t;
+    ///for loop algorithm that will set x and y axis when the program draws the shape
+    for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
+    {
+        ///Condition that will check if graph is for 1/x and if t is 0 continue past since 1 cannot be divide by 0
+        if (Graph == XReciprical && t == 0.0)
+            continue;
 
-      return QPointF(x, 0);
-  }
+        QPointF point = drawGeneral(t);
+        QPointF single_pixel;
+        single_pixel.setX(point.x() * Scale + center.x());
+        single_pixel.setY(point.y() * Scale + center.y());
+        painter.drawLine(single_pixel, previous_pixel);
+        previous_pixel = single_pixel;
+    }
 
-  QPointF EquationsArea::drawYAxis(float t)
-  {
+    ///for loop algorithm that will draw x axis when the program draws the shape
+    for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
+    {
+        QPointF point = drawXAxis(t);
+        QPointF single_pixel;
+        single_pixel.setX(point.x() * Scale + center.x());
+        single_pixel.setY(point.y() * Scale + center.y());
+        painter.drawLine(single_pixel, previous_pixel);
+        previous_pixel = single_pixel;
+    }
 
-      float y = t;
-      return QPointF(0, y);
-  }
-
-  void EquationsArea::paintEvent(QPaintEvent *event)
-  {
-      float step = length_of_Interval / step_count_of_shape;
-
-
-      QPainter painter(this); ///calling "this"
-      painter.setRenderHint(QPainter::Antialiasing, true); ///prevents liasing
-      painter.setBrush(background_color);
-      painter.setPen(graph_color);
-      painter.drawRect(this->rect());
-      QPoint center = this->rect().center();
-      ///to adjust the dotted line and make it into smooth line
-      QPointF previous_point = drawGeneral(0);
-      QPointF previous_pixel;
-      ///implicit conversion that will turn the floating numbers to a double
-      previous_pixel.setX(previous_point.x() * Scale + center.x());
-      previous_pixel.setY(previous_point.y() * Scale + center.y());
-
-      ///for loop algorithm that will set x and y axis when the program draws the shape
-      for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
-      {
-          if (Graph == XReciprical && t == 0.0)
-              continue;
-          QPointF point = drawGeneral(t);
-
-          QPointF single_pixel;
-          single_pixel.setX(point.x() * Scale + center.x());
-          single_pixel.setY(point.y() * Scale + center.y());
-          painter.drawLine(single_pixel, previous_pixel);
-          // previous_pixel = single_pixel;
-          previous_pixel = single_pixel;
-
-      }
-
-      ///for loop algorithm that will set x and y axis when the program draws the shape
-      for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
-      {
-          QPointF point = drawXAxis(t);
-
-
-          QPointF single_pixel;
-          single_pixel.setX(point.x() * Scale + center.x());
-          single_pixel.setY(point.y() * Scale + center.y());
-          painter.drawLine(single_pixel, previous_pixel);
-          // previous_pixel = single_pixel;
-          previous_pixel = single_pixel;
-
-      }
-
-      ///for loop algorithm that will set x and y axis when the program draws the shape
-      for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
-      {
-          QPointF point = drawYAxis(t);
-
-
-          QPointF single_pixel;
-          single_pixel.setX(point.x() * Scale + center.x());
-          single_pixel.setY(point.y() * Scale + center.y());
-          painter.drawLine(single_pixel, previous_pixel);
-          // previous_pixel = single_pixel;
-          previous_pixel = single_pixel;
-
-      }
-
-
-  }
+    ///for loop algorithm that will draw y axis when the program draws the shape
+    for(float t = -length_of_Interval; t < length_of_Interval; t+= step)
+    {
+        QPointF point = drawYAxis(t);
+        QPointF single_pixel;
+        single_pixel.setX(point.x() * Scale + center.x());
+        single_pixel.setY(point.y() * Scale + center.y());
+        painter.drawLine(single_pixel, previous_pixel);
+        previous_pixel = single_pixel;
+    }
+}
 
 
