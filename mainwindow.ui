@@ -56,13 +56,13 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="EquationsArea" name="equationsArea" native="true">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>611</y>
-      <width>311</width>
-      <height>20</height>
+      <x>870</x>
+      <y>510</y>
+      <width>201</width>
+      <height>121</height>
      </rect>
     </property>
    </widget>
@@ -207,7 +207,7 @@
      <rect>
       <x>0</x>
       <y>10</y>
-      <width>283</width>
+      <width>326</width>
       <height>41</height>
      </rect>
     </property>
@@ -257,6 +257,58 @@
      <string>Save Image</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="lineButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>510</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>line</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="parabolaButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>540</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Parabola</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sqrtButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>570</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Square Root</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="xRecipButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>600</y>
+      <width>80</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1/x</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -264,7 +316,7 @@
      <x>0</x>
      <y>0</y>
      <width>1097</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMathScriptum">
@@ -298,6 +350,12 @@
    <class>ShapeArea</class>
    <extends>QWidget</extends>
    <header location="global">shapearea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EquationsArea</class>
+   <extends>QWidget</extends>
+   <header location="global">equationsarea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
