@@ -44,10 +44,10 @@ void MainWindow::on_astroid_Button_clicked()
 }
 
 ///function for when user clicks the spin value box to change values of the shape
-void MainWindow::on_spinScale_valueChanged(double scaler)
-{
+//void MainWindow::on_spinScale_valueChanged(double scaler)
+//{
 
-}
+//}
 ///when the user clicks the astroid button
 void MainWindow::on_CycloidButton_clicked()
 {

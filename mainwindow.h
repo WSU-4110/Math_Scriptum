@@ -21,7 +21,7 @@ public:
     ///slots for the buttons created in the user interface
 private slots:
     void on_astroid_Button_clicked();
-   void on_spinScale_valueChanged(double arg1);
+   //void on_spinScale_valueChanged(double arg1);
 
 
    void on_CycloidButton_clicked();

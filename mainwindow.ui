@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Math Scriptum</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -335,12 +335,6 @@
      <height>23</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMathScriptum">
-    <property name="title">
-     <string>MathScriptum</string>
-    </property>
-   </widget>
-   <addaction name="menuMathScriptum"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
