@@ -64,11 +64,21 @@ private slots:
 
    void on_saveImage_clicked();
 
+
+   void on_lineButton_clicked();
+
+   void on_parabolaButton_clicked();
+
+   void on_sqrtButton_clicked();
+
+   void on_xRecipButton_clicked();
+
    void on_limitsButton_clicked();
 
    void on_derivativesButton_clicked();
 
    void on_integralsButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;

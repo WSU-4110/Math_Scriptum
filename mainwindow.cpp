@@ -304,3 +304,32 @@ void MainWindow::on_sCount_valueChanged(int counter)
     this->ui->Shapearea->set_step_counter(counter);
 
 }
+
+void MainWindow::on_lineButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Line);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_parabolaButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Parabola);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_sqrtButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Sqrt);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_xRecipButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::XReciprical);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
