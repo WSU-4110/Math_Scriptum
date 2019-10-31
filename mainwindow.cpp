@@ -236,7 +236,7 @@ void MainWindow::on_integralsButton_clicked()
 
 
     return;
-
+}
 void MainWindow::on_circle_Button_clicked()
 {
     this->ui->Shapearea->set_up_Shape(ShapeArea::Circle);
