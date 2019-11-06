@@ -206,34 +206,6 @@ QPointF ShapeArea::drawEllipse(float t)
 ///main function of the shape area class
 void ShapeArea::paintEvent(QPaintEvent *event)
 {
-    float step = length_of_Interval / step_count_of_shape;
 
-
-    QPainter painter(this); ///calling "this"
-    painter.setRenderHint(QPainter::Antialiasing, true); ///prevents liasing
-    painter.setBrush(background_color);
-    painter.setPen(shape_color);
-    painter.drawRect(this->rect());
-    QPoint center = this->rect().center();
-    ///to adjust the dotted line and make it into smooth line
-    QPointF previous_point = drawGeneral(0);
-    QPointF previous_pixel;
-    ///implicit conversion that will turn the floating numbers to a double
-    previous_pixel.setX(previous_point.x() * Scale + center.x());
-    previous_pixel.setY(previous_point.y() * Scale + center.y());
-
-    ///for loop algorithm that will set x and y axis when the program draws the shape
-    for(float t = 0; t < length_of_Interval; t+= step)
-    {
-        QPointF point = drawGeneral(t);
-
-        QPointF single_pixel;
-        single_pixel.setX(point.x() * Scale + center.x());
-        single_pixel.setY(point.y() * Scale + center.y());
-        painter.drawLine(single_pixel, previous_pixel);
-        // previous_pixel = single_pixel;
-        previous_pixel = single_pixel;
-
-    }
 
 }

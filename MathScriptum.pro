@@ -27,12 +27,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     notearea.cpp \
+    shape_factory.cpp \
     shapearea.cpp
 
 HEADERS += \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
+    shape_factory.h \
     shapearea.h
 
 FORMS += \

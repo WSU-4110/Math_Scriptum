@@ -20,6 +20,7 @@ class ShapeArea : public QWidget
 
     Q_OBJECT
 public:
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
     explicit ShapeArea(QWidget *parent = nullptr);
     ///override functions from base class needed to have the custom widget bhave accordingly
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
@@ -91,7 +92,7 @@ public:
     ///overriding method form base class
     /// NOT using built in override method of paintEvent
     protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+
 
 
 signals:
