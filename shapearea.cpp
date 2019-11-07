@@ -203,6 +203,10 @@ QPointF ShapeArea::drawEllipse(float t)
 
 
 
+
+
+
+
 ///main function of the shape area class
 void ShapeArea::paintEvent(QPaintEvent *event)
 {

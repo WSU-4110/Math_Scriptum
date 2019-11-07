@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QColorDialog>
+#include <QColor>
 #include <QFileDialog>
 #include <QFile>
 #include <QMessageBox>
@@ -333,3 +334,17 @@ void MainWindow::on_xRecipButton_clicked()
    update_UserInterface();
 }
 
+
+void MainWindow::on_background_color_button_clicked()
+{
+    QColor c = QColorDialog::getColor(ui->Shapearea->get_background_color(),this, "Choose a Color!");
+    ui->Shapearea->set_color_of_window(c);
+
+}
+
+void MainWindow::on_line_color_button_clicked()
+{
+    QColor c = QColorDialog::getColor(ui->Shapearea->get_pixel_color(),this, "Choose a Color!");
+    ui->Shapearea->set_pixel_color(c);
+
+}

@@ -80,6 +80,10 @@ private slots:
    void on_integralsButton_clicked();
 
 
+   void on_background_color_button_clicked();
+
+   void on_line_color_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
