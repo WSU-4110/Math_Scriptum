@@ -158,6 +158,7 @@ void MainWindow::on_pasteFromFile_clicked()
 
 void MainWindow::on_saveProgress_clicked()
 {
+    // This is the global access point for the Singleton Design Patter, already implemented.
     /// Get the file path (location) of the save file.
     QString filename = filePath;
 
@@ -168,6 +169,7 @@ void MainWindow::on_saveProgress_clicked()
         return;
     }
 
+     // Following Singleton Design pattern, this is the only instance of the object that will save the text in note area.
     /// SaveFile is a QFile object to check if a save file has been created by the user.
     QFile SaveFile(filename);
 
@@ -204,6 +206,7 @@ void MainWindow::on_saveImage_clicked()
         return;
     }
 
+    // Following Singleton Design pattern, this is the single instance of the object that will be used to save 1 image.
     /// A QImage object called img is referencing the shape area.
     QImage img(this->ui->Shapearea->size(), QImage::Format_ARGB32);
 
