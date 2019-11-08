@@ -13,7 +13,7 @@ public:
     static QPointF drawXReciprical(float t);
     static QPointF drawXAxis(float t);
     static QPointF drawYAxis(float t);
-    static QPointF drawGeneral(float t);
+
 
 
 };

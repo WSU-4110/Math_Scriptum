@@ -1,5 +1,5 @@
 #include "graphs.h"
-
+//comment
 
 ///The slope is negative to represent a line with positive slope. Not sure why but works
 QPointF graph::drawLine(float t)

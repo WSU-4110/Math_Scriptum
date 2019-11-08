@@ -32,23 +32,18 @@ public:
         load_graph_change();
     }
 
-protected:
+    ///Function to set graph scale, length of interval and step count
+    void load_graph_change();
+
+    QPointF drawGeneral(float t);
+
     ///Function that will draw graph selected in equationsarea widget on main window
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-   protected:
-    ///each function will draw a graph defined by the math functions they represent
-    /*QPointF drawLine(float t);
-    QPointF drawParabola(float t);
-    QPointF drawSQRT(float t);
-    QPointF drawXReciprical(float t);
-    QPointF drawXAxis(float t);
-    QPointF drawYAxis(float t);
-    */
-    QPointF drawGeneral(float t);
-
-    ///Function to set graph scale, length of interval and step count
-    void load_graph_change();
+private:
+    float length_of_Interval;
+    float Scale;
+    int step_count_of_shape;
 
     ///use Qcolor class to allow the background color to be changed
     QColor background_color;
@@ -57,11 +52,7 @@ protected:
     QColor graph_color;
 
     ///initialize enum graph type variable
-    graph_type Graph;
-
-    float length_of_Interval;
-    float Scale;
-    int step_count_of_shape;
+    graph_type Graph;   
 };
 
 #endif // EQUATIONSAREA_H

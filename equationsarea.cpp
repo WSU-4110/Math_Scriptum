@@ -1,6 +1,6 @@
 #include "equationsarea.h"
 #include "graphs.h"
-
+//comment
 EquationsArea::EquationsArea(QWidget *parent) : QWidget(parent),
     background_color(255,255,255),
     graph_color(0,0,0),
