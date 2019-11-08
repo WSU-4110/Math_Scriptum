@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 SOURCES += \
     equationsarea.cpp \
+    graphs.cpp \
     main.cpp \
     mainwindow.cpp \
     notearea.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
 
 HEADERS += \
     equationsarea.h \
+    graphs.h \
     mainwindow.h \
     notearea.h \
     shapearea.h

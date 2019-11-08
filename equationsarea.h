@@ -36,14 +36,15 @@ protected:
     ///Function that will draw graph selected in equationsarea widget on main window
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-private:
+   protected:
     ///each function will draw a graph defined by the math functions they represent
-    QPointF drawLine(float t);
+    /*QPointF drawLine(float t);
     QPointF drawParabola(float t);
     QPointF drawSQRT(float t);
     QPointF drawXReciprical(float t);
     QPointF drawXAxis(float t);
     QPointF drawYAxis(float t);
+    */
     QPointF drawGeneral(float t);
 
     ///Function to set graph scale, length of interval and step count
