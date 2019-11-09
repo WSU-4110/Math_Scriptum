@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1097</width>
-    <height>707</height>
+    <height>754</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -254,6 +254,13 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="printButton">
+      <property name="text">
+       <string>Print2PDF</string>
+      </property>
+     </widget>
+    </item>
    </layout>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
@@ -284,7 +291,7 @@
      <x>0</x>
      <y>0</y>
      <width>1097</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

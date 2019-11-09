@@ -8,6 +8,7 @@
 #include <QTextStream>
 #include <QListWidget>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -346,5 +347,12 @@ void MainWindow::on_line_color_button_clicked()
 {
     QColor c = QColorDialog::getColor(ui->Shapearea->get_pixel_color(),this, "Choose a Color!");
     ui->Shapearea->set_pixel_color(c);
+
+}
+
+void MainWindow::on_printButton_clicked()
+{
+    QImage img(this->ui->equationsArea->size(), QImage::Format_ARGB32);
+    print::printToPDF(this->ui->textEdit->toPlainText(), img);
 
 }
