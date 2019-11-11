@@ -145,6 +145,7 @@ QPointF ShapeArea::drawHypo(float t)
 QPointF ShapeArea::drawLine(float t)
 {
     ///implement
+   return QPointF (cos(t),sin(t));
 }
 
 QPointF ShapeArea::drawCircle(float t)
