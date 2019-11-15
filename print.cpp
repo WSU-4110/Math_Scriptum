@@ -5,6 +5,11 @@
 #include <QRect>
 #include <QTextStream>
 #include <QFileDialog>
+#include <QPrinter>
+#include <QTextDocument>
+#include <QTextImageFormat>
+#include <QTextCursor>
+#include <QTextCharFormat>
 
 print::print(QWidget *parent) : EquationsArea(parent)//, EquationsArea(parent)
 {
@@ -13,20 +18,44 @@ print::print(QWidget *parent) : EquationsArea(parent)//, EquationsArea(parent)
 
 void print::printToPDF(QString text, QImage image)
 {
-    int numOfChars =text.count();
+
+
+
+    //QTextDocument doc(text);
+
+    //int numOfChars =text.count();
     //reduce numOfChars during loop
 
-    int index = 0;
+    //int index = 0;
 
 
     QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"), "/home/jana/untitled.pdf", tr("Text (*.pdf)"));
 
+    QPrinter printer(QPrinter::PrinterResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setPaperSize(QPrinter::Letter);
+    printer.setOutputFileName(fileName);
+    printer.setPageMargins(QMargins(30,30,30,30));
+    QFont textFont("Times New Roman", 12);
+    QTextCharFormat txtfmt = QTextCharFormat();
 
+    QTextDocument doc;
+    doc.setPageSize(printer.pageRect().size());
 
+    QTextCursor cursor(&doc);
+
+    txtfmt.setFont(textFont);
+    cursor.insertText(text, txtfmt);
+
+    doc.print(&printer);
+
+    //QTextImageFormat imgFormat(image);
+    cursor.insertImage(image);
     //QPrinter printer;
     //QPageLayout(const QPageSize &pageSize, Orientation orientation,
     //const QMarginsF &margins, Unit units = Point,
     //const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0));
+    /*
     QPdfWriter writer(fileName);
     writer.setPageSize(QPageSize(QPageSize::Letter));
 
@@ -98,7 +127,7 @@ void print::printToPDF(QString text, QImage image)
         single_pixel.setY(point.y() * Scale + center.y());
         painter.drawLine(single_pixel, previous_pixel);
         previous_pixel = single_pixel;
-    }
+    }*/
 /*
     //EquationsArea::paintEvent(writer);
     QRectF target(474, 351, 614, 331);
