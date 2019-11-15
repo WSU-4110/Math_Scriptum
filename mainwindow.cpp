@@ -353,6 +353,9 @@ void MainWindow::on_line_color_button_clicked()
 void MainWindow::on_printButton_clicked()
 {
     QImage img(this->ui->equationsArea->size(), QImage::Format_ARGB32);
-    print::printToPDF(this->ui->textEdit->toPlainText(), img);
+    QPainter painter(&img);
+    this->render(&painter);
+    print obj;
+    obj.printToPDF(this->ui->textEdit->toPlainText(), img);
 
 }

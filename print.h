@@ -6,20 +6,23 @@
 #include <QPdfWriter>
 #include <QPageSize>
 #include <QPainter>
+#include "equationsarea.h"
 
 
-class print : public QMainWindow
+class print : public EquationsArea
 {
     Q_OBJECT
 public:
     explicit print(QWidget *parent = nullptr);
 
-    static void printToPDF(QString text, QImage image);
+    void printToPDF(QString text, QImage image);
 
     void getFilename(QString name)
     {
         filename = name;
     }
+
+    //void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 private:
     QString filename;
     //QPrinter printer;
