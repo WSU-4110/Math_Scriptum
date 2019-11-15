@@ -17,18 +17,6 @@ public:
 
     void printToPDF(QString text, QImage image);
 
-    void getFilename(QString name)
-    {
-        filename = name;
-    }
-
-    //void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
-private:
-    QString filename;
-    //QPrinter printer;
-    //QPdfWriter *writer = new QPdfWriter(filename);
-    //QPainter *painter;
-
 signals:
 
 public slots:

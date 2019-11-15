@@ -352,10 +352,19 @@ void MainWindow::on_line_color_button_clicked()
 
 void MainWindow::on_printButton_clicked()
 {
-    QImage img(this->ui->equationsArea->size(), QImage::Format_ARGB32);
-    QPainter painter(&img);
-    this->render(&painter);
+    ///Set graph image size and format
+    QImage image(ui->equationsArea->size(), QImage::Format_ARGB32);
+
+    ///Create painter object for image object
+    QPainter painter(&image);
+
+    ///Draw graph in equation area to painter object
+    ui->equationsArea->render(&painter);
+
+    ///Create print class object
     print obj;
-    obj.printToPDF(this->ui->textEdit->toPlainText(), img);
+
+    ///call print to PDF method with arguments note area string and image of graph
+    obj.printToPDF(this->ui->textEdit->toPlainText(), image);
 
 }
