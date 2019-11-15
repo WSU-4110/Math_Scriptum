@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1097</width>
-    <height>707</height>
+    <width>1014</width>
+    <height>793</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,244 +17,6 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-    </item>
-    <item row="1" column="4">
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QPushButton" name="xRecipButton">
-        <property name="text">
-         <string>1/x</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="sqrtButton">
-        <property name="text">
-         <string>Square Root</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="parabolaButton">
-        <property name="text">
-         <string>Parabola</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="lineButton">
-        <property name="text">
-         <string>line</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0" rowspan="4" colspan="2">
-     <widget class="ShapeArea" name="Shapearea" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="3" rowspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="CycloidButton">
-        <property name="text">
-         <string>Cycloid</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="astroid_Button">
-        <property name="text">
-         <string>Astroid</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="circle_Button">
-        <property name="text">
-         <string>circle</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="ellipse_Button">
-        <property name="text">
-         <string>Ellipse</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="hexagon_Button">
-        <property name="text">
-         <string>hexagon</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="hypo_Button">
-        <property name="text">
-         <string>Hypo</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="invertedCircle_Button">
-        <property name="text">
-         <string>inverted circle</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="huyg_Button">
-        <property name="text">
-         <string>huygens</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="line_Button">
-        <property name="text">
-         <string>Lines</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="createSaveFileButton">
-        <property name="text">
-         <string>Create Save File</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="selectSaveFileButton">
-        <property name="text">
-         <string>Select Save File</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pasteFromFile">
-        <property name="text">
-         <string>Paste From File</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="saveProgress">
-        <property name="text">
-         <string>Save Progress</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="saveImage">
-        <property name="text">
-         <string>Save Image</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="limitsButton">
-        <property name="text">
-         <string>Limits</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="derivativesButton">
-        <property name="text">
-         <string>Derivatives</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="integralsButton">
-        <property name="text">
-         <string>Integrals</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="4">
-     <widget class="QWidget" name="NoteArea" native="true">
-      <widget class="QTextEdit" name="textEdit">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>10</y>
-         <width>661</width>
-         <height>311</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="3" column="4" rowspan="3">
-     <widget class="EquationsArea" name="equationsArea" native="true"/>
-    </item>
-    <item row="0" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Size</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="sScale"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Step</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="sInterval"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Scale/Interval</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="sCount"/>
-      </item>
-     </layout>
-    </item>
-    <item row="4" column="3">
-     <widget class="QPushButton" name="background_color_button">
-      <property name="text">
-       <string>Background Color</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="3">
-     <widget class="QPushButton" name="line_color_button">
-      <property name="text">
-       <string>Line Color</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
@@ -271,11 +33,450 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>2</width>
-      <height>2</height>
+      <width>16</width>
+      <height>16</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+   </widget>
+   <widget class="ShapeArea" name="Shapearea" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>189</y>
+      <width>493</width>
+      <height>547</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="NoteArea" native="true">
+    <property name="geometry">
+     <rect>
+      <x>712</x>
+      <y>189</y>
+      <width>320</width>
+      <height>242</height>
+     </rect>
+    </property>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>661</width>
+       <height>311</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="EquationsArea" name="equationsArea" native="true">
+    <property name="geometry">
+     <rect>
+      <x>712</x>
+      <y>437</y>
+      <width>320</width>
+      <height>299</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="background_color_button">
+    <property name="geometry">
+     <rect>
+      <x>508</x>
+      <y>684</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Background Color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="line_color_button">
+    <property name="geometry">
+     <rect>
+      <x>508</x>
+      <y>713</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line Color</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shape10Button">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>210</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>shape10</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shape11Button">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>260</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>shape11</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shape12Button">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>300</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>multi-sided</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+   </widget>
+   <widget class="QWidget" name="">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="xRecipButton">
+       <property name="text">
+        <string>1/x</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sqrtButton">
+       <property name="text">
+        <string>Square Root</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="parabolaButton">
+       <property name="text">
+        <string>Parabola</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="lineButton">
+       <property name="text">
+        <string>line</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="CycloidButton">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>190</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cycloid</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ellipse_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>277</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ellipse</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="circle_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>248</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>circle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="astroid_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>219</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Astroid</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hypo_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>335</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hypo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="invertedCircle_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>364</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>inverted circle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="huyg_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>393</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>huygens</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hexagon_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>306</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hexagon</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createSaveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>451</y>
+      <width>87</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create Save File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectSaveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>480</y>
+      <width>83</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Save File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="line_Button">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>422</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lines</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveImage">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>567</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Image</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pasteFromFile">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>509</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Paste From File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveProgress">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>538</y>
+      <width>77</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Progress</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="limitsButton">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>596</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Limits</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="integralsButton">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>654</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Integrals</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="derivativesButton">
+    <property name="geometry">
+     <rect>
+      <x>509</x>
+      <y>625</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Derivatives</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>252</x>
+      <y>130</y>
+      <width>19</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Size</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="sScale">
+    <property name="geometry">
+     <rect>
+      <x>277</x>
+      <y>130</y>
+      <width>55</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>338</x>
+      <y>130</y>
+      <width>22</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Step</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="sInterval">
+    <property name="geometry">
+     <rect>
+      <x>366</x>
+      <y>130</y>
+      <width>55</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>427</x>
+      <y>130</y>
+      <width>67</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scale/Interval</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="sCount">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>130</y>
+      <width>39</width>
+      <height>20</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -283,7 +484,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1097</width>
+     <width>1014</width>
      <height>21</height>
     </rect>
    </property>

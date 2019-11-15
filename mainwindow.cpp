@@ -328,6 +328,31 @@ void MainWindow::on_line_color_button_clicked()
 
 }
 
+
+
+void MainWindow::on_shape10Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape10);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+void MainWindow::on_shape11Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape11);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_shape12Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape12);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
 void MainWindow::on_limitsButton_clicked()
 {
 

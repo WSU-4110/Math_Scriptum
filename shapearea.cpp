@@ -57,6 +57,14 @@ QPointF ShapeArea::drawGeneral(float t)
         break;
     case Lines:
         return drawLines(t);
+    case shape10:
+        return drawShape10(t);
+        break;
+    case shape11:
+        return drawShape11(t);
+        break;
+    case shape12:
+        return drawShape12(t);
         break;
     case General:
         return drawGeneral(t);
@@ -112,9 +120,24 @@ void ShapeArea::load_shape_change()
         step_count_of_shape = 225;
         break;
    case hexagon:
-        Scale = 12;
+        Scale = 442;
         length_of_Interval = 5 * M_PI;
         step_count_of_shape = 234;
+        break;
+    case shape10:
+         Scale = 100;
+         length_of_Interval = 2 * M_PI;
+         step_count_of_shape = 255;
+        break;
+    case shape11:
+         Scale = 10;
+         length_of_Interval = 12 * M_PI;
+         step_count_of_shape = 539;
+        break;
+    case shape12:
+         Scale = 15;
+         length_of_Interval = 6 * M_PI;
+         step_count_of_shape = 256;
         break;
 
 
@@ -191,6 +214,38 @@ QPointF ShapeArea::drawHexagon(float t)
     return QPointF(x,y);
 
 
+}
+
+QPointF ShapeArea::drawShape10(float t)
+{
+    float cos_t = cos(t);
+    float sin_t = sin(t);
+    float x = 6 * cos_t * cos_t * cos_t * cos_t;
+    float y = 6 * sin_t * sin_t * sin_t * sin_t;
+    return QPointF(x, y);
+}
+
+QPointF ShapeArea::drawShape11(float t)
+{
+        float v1 = 15;
+        float v2 = 4;
+
+        float x = v1 * cos (t) - v2 * cos (v1 / v2 * t);
+        float y = v1 * sin (t) - v2 * sin (v1 / v2 * t);
+    return QPointF (x,y);
+}
+
+QPointF ShapeArea::drawShape12(float t)
+{
+    float R = 9;
+      float r = 4;
+      float d = 9;
+
+      float x = (R - r) * cos (t) + d * cos (t * ((R - r) / r));
+
+      float y = (R - r) * sin (t) - d * sin (t * ((R - r) / r));
+
+      return QPointF (x, y);
 }
 
 QPointF ShapeArea::drawEllipse(float t)
