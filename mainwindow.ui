@@ -528,7 +528,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>280</x>
        <y>20</y>
-       <width>71</width>
+       <width>91</width>
        <height>23</height>
       </rect>
      </property>
@@ -540,15 +540,15 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>Singlular</string>
+      <string>MultiLayerd</string>
      </property>
     </widget>
     <widget class="QPushButton" name="hypo_Button">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>370</x>
        <y>20</y>
-       <width>61</width>
+       <width>51</width>
        <height>23</height>
       </rect>
      </property>
@@ -566,9 +566,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QPushButton" name="invertedCircle_Button">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>420</x>
        <y>20</y>
-       <width>91</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
@@ -580,7 +580,7 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>MultiLayerd</string>
+      <string>Singular</string>
      </property>
     </widget>
     <widget class="QPushButton" name="huyg_Button">
