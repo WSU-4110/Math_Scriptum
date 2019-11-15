@@ -243,7 +243,9 @@ void MainWindow::on_ellipse_Button_clicked()
 
 void MainWindow::on_invertedCircle_Button_clicked()
 {
-
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Line);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
 }
 
 void MainWindow::on_hypo_Button_clicked()
