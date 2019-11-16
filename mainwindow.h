@@ -84,7 +84,7 @@ private slots:
 
    void on_line_color_button_clicked();
 
-   void on_pushButton_clicked();
+   //void on_pushButton_clicked();
 
    void on_shape10Button_clicked();
 
