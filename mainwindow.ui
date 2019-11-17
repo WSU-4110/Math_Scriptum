@@ -739,6 +739,12 @@ p, li { white-space: pre-wrap; }
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuMathScriptum">
+    <property name="title">
+     <string>MathScriptum</string>
+    </property>
+   </widget>
+   <addaction name="menuMathScriptum"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
