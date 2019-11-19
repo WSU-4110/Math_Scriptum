@@ -331,12 +331,12 @@ void MainWindow::on_line_color_button_clicked()
 void MainWindow::on_limitsButton_clicked()
 {
 
-    QImage img1("/Users/sishirbuddha/Desktop/Limits1.png");
+    QImage img1(":/resources/images/Limits1.png");
     QPixmap pm = QPixmap::fromImage(img1);
     pm = pm.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img2("/Users/sishirbuddha/Desktop/Limits2.png");
+    QImage img2(":/resources/images/Limits2.png");
     QPixmap pm2 = QPixmap::fromImage(img2);
     pm2 = pm2.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
@@ -364,21 +364,21 @@ void MainWindow::on_limitsButton_clicked()
 void MainWindow::on_derivativesButton_clicked()
 {
 
-    QImage img1("/Users/sishirbuddha/Desktop/Deriv1.png");
+    QImage img1(":/resources/images/Deriv1.png");
     QPixmap pm = QPixmap::fromImage(img1);
     pm = pm.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
-    QImage img2("/Users/sishirbuddha/Desktop/Deriv2.png");
+    QImage img2(":/resources/images/Deriv2.png");
     QPixmap pm2 = QPixmap::fromImage(img2);
     pm2 = pm2.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img3("/Users/sishirbuddha/Desktop/Deriv3.png");
+    QImage img3(":/resources/images/Deriv3.png");
     QPixmap pm3 = QPixmap::fromImage(img3);
     pm3 = pm3.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img4("/Users/sishirbuddha/Desktop/Deriv4.png");
+    QImage img4(":/resources/images/Deriv4.png");
     QPixmap pm4 = QPixmap::fromImage(img4);
     pm4 = pm4.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
@@ -423,27 +423,27 @@ void MainWindow::on_derivativesButton_clicked()
 
 void MainWindow::on_integralsButton_clicked()
 {
-    QImage img1("/Users/sishirbuddha/Desktop/Int1.png");
+    QImage img1(":/resources/images/Int1.png");
     QPixmap pm = QPixmap::fromImage(img1);
         pm = pm.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img2("/Users/sishirbuddha/Desktop/Int2.png");
+    QImage img2(":/resources/images/Int2.png");
     QPixmap pm2 = QPixmap::fromImage(img2);
         pm2 = pm2.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img3("/Users/sishirbuddha/Desktop/Int3.png");
+    QImage img3(":/resources/images/Int3.png");
     QPixmap pm3 = QPixmap::fromImage(img3);
         pm3 = pm3.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img4("/Users/sishirbuddha/Desktop/Int4.png");
+    QImage img4(":/resources/images/Int4.png");
     QPixmap pm4 = QPixmap::fromImage(img4);
         pm4 = pm4.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
-    QImage img5("/Users/sishirbuddha/Desktop/Int5.png");
+    QImage img5(":/resources/images/Int5.png");
     QPixmap pm5 = QPixmap::fromImage(img5);
     pm5 = pm5.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
@@ -488,7 +488,7 @@ void MainWindow::on_integralsButton_clicked()
 
     displayIntegrals5.setWindowTitle("Integrals Page Five");
     displayIntegrals5.setText("Integrals Page Five");
-    displayIntegrals5.setIconPixmap(pm);
+    displayIntegrals5.setIconPixmap(pm5);
     displayIntegrals5.icon();
             displayIntegrals5.setBaseSize(1000,1000);
 
@@ -496,7 +496,6 @@ void MainWindow::on_integralsButton_clicked()
 
     return;
 }
-
 // Menu Bar Items
 
 // Save Controls
