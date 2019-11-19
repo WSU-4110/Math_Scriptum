@@ -88,6 +88,25 @@ public:
     }
 
 
+    void set_color_of_window (QColor c)
+    {
+        background_color = c;
+    }
+    QColor get_background_color() const
+    {
+        return background_color;
+    }
+
+    void set_pixel_color(QColor c)
+    {
+        shape_color = c;
+    }
+    QColor get_pixel_color() const
+    {
+        return shape_color;
+    }
+
+
     ///overriding method form base class
     /// NOT using built in override method of paintEvent
     protected:
