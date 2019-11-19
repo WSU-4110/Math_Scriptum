@@ -4,7 +4,11 @@
 #include <QMainWindow>
 #include <QList>
 #include <QListWidgetItem>
+
+#include "shapewindow.h"
+
 #include "print.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -85,13 +89,26 @@ private slots:
 
    void on_line_color_button_clicked();
 
+
+   //void on_pushButton_clicked();
+
+   void on_shape10Button_clicked();
+
+   void on_shape11Button_clicked();
+
+   void on_shape12Button_clicked();
+
+   void on_pushButton_clicked();
+
    void on_printButton_clicked();
 
    void keyboardShortcuts();
 
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
+    ShapeWindow * shapewindow;
 private:
     void update_UserInterface ();
 };

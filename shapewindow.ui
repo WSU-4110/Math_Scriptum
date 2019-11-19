@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShapeWindow</class>
+ <widget class="QDialog" name="ShapeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1309</width>
+    <height>796</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="ShapeArea" name="Shapearea" native="true">
+      <property name="geometry">
+       <rect>
+        <x>107</x>
+        <y>9</y>
+        <width>1175</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>9</y>
+        <width>92</width>
+        <height>751</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QSpinBox" name="sCount">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="sInterval">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="sScale">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="astroid_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Astroid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="CycloidButton">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Cycloid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="hypo_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Hypo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ellipse_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ellipse</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="huyg_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Huygens</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="line_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Lines</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="invertedCircle_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Singular</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="circle_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Circle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="hexagon_Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>MultiLayerd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="shape11Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>InvCircle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="shape10Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Quadrant</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="shape12Button">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Multi-Sided</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ShapeArea</class>
+   <extends>QWidget</extends>
+   <header location="global">shapearea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -7,7 +7,11 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QListWidget>
+
+#include "shapewindow.h"
+
 #include <QShortcut>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -245,7 +249,9 @@ void MainWindow::on_ellipse_Button_clicked()
 
 void MainWindow::on_invertedCircle_Button_clicked()
 {
-
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Line);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
 }
 
 void MainWindow::on_hypo_Button_clicked()
@@ -330,6 +336,32 @@ void MainWindow::on_line_color_button_clicked()
 
 }
 
+
+
+
+void MainWindow::on_shape10Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape10);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+void MainWindow::on_shape11Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape11);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_shape12Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape12);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
 void MainWindow::on_printButton_clicked()
 {
     ///Set graph image size and format
@@ -360,6 +392,7 @@ void MainWindow::keyboardShortcuts()
     //QObject::connect(parabola, &QShortcut::activated, this, SLOT(MainWindow::on_parabolaButton_clicked()));
 
 }
+
 
 void MainWindow::on_limitsButton_clicked()
 {
@@ -493,4 +526,11 @@ void MainWindow::on_integralsButton_clicked()
     return;
 }
 
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    shapewindow = new ShapeWindow(this);
+    shapewindow->show();
+}
 
