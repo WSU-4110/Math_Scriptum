@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QColorDialog>
+#include <QColor>
 #include <QFileDialog>
 #include <QFile>
 #include <QMessageBox>
@@ -44,10 +45,10 @@ void MainWindow::on_astroid_Button_clicked()
 }
 
 ///function for when user clicks the spin value box to change values of the shape
-void MainWindow::on_spinScale_valueChanged(double scaler)
-{
+//void MainWindow::on_spinScale_valueChanged(double scaler)
+//{
 
-}
+//}
 ///when the user clicks the astroid button
 void MainWindow::on_CycloidButton_clicked()
 {
@@ -216,9 +217,6 @@ void MainWindow::on_saveImage_clicked()
 }
 
 
-
-
-
 void MainWindow::on_circle_Button_clicked()
 {
     this->ui->Shapearea->set_up_Shape(ShapeArea::Circle);
@@ -284,6 +282,49 @@ void MainWindow::on_sInterval_valueChanged(double scale)
 void MainWindow::on_sCount_valueChanged(int counter)
 {
     this->ui->Shapearea->set_step_counter(counter);
+
+}
+
+void MainWindow::on_lineButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Line);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_parabolaButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Parabola);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_sqrtButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::Sqrt);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+void MainWindow::on_xRecipButton_clicked()
+{
+    this->ui->equationsArea->set_up_Graph(EquationsArea::XReciprical);
+   this->ui->equationsArea->repaint();
+   update_UserInterface();
+}
+
+
+void MainWindow::on_background_color_button_clicked()
+{
+    QColor c = QColorDialog::getColor(ui->Shapearea->get_background_color(),this, "Choose a Color!");
+    ui->Shapearea->set_color_of_window(c);
+
+}
+
+void MainWindow::on_line_color_button_clicked()
+{
+    QColor c = QColorDialog::getColor(ui->Shapearea->get_pixel_color(),this, "Choose a Color!");
+    ui->Shapearea->set_pixel_color(c);
 
 }
 
@@ -406,7 +447,7 @@ void MainWindow::on_integralsButton_clicked()
     QPixmap pm5 = QPixmap::fromImage(img5);
     pm5 = pm5.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
-    
+
     QMessageBox displayIntegrals;
     QMessageBox displayIntegrals2;
     QMessageBox displayIntegrals3;
@@ -454,5 +495,125 @@ void MainWindow::on_integralsButton_clicked()
     displayIntegrals5.exec();
 
     return;
+}
+
+// Menu Bar Items
+
+// Save Controls
+void MainWindow::on_actionCreate_Save_File_triggered()
+{
+    on_createSaveFileButton_clicked();
+}
+
+void MainWindow::on_actionSelect_Save_File_triggered()
+{
+    on_selectSaveFileButton_clicked();
+}
+
+void MainWindow::on_actionPaste_From_File_triggered()
+{
+    on_pasteFromFile_clicked();
+}
+
+
+void MainWindow::on_actionSave_Progress_triggered()
+{
+    on_saveProgress_clicked();
+}
+
+void MainWindow::on_actionSave_Image_triggered()
+{
+    on_saveImage_clicked();
+}
+
+// Graph Controls
+void MainWindow::on_actionl_x_triggered()
+{
+    on_xRecipButton_clicked();
+}
+
+void MainWindow::on_actionSquare_Root_triggered()
+{
+    on_sqrtButton_clicked();
+}
+
+
+void MainWindow::on_actionParabola_triggered()
+{
+    on_parabolaButton_clicked();
+}
+
+void MainWindow::on_actionLine_triggered()
+{
+    on_lineButton_clicked();
+}
+
+// Color Controls
+void MainWindow::on_actionBackground_Color_triggered()
+{
+    on_background_color_button_clicked();
+}
+
+void MainWindow::on_actionLine_Color_triggered()
+{
+    on_line_color_button_clicked();
+}
+
+// Shapes
+
+void MainWindow::on_actionCycloid_triggered()
+{
+    on_CycloidButton_clicked();
+}
+
+void MainWindow::on_actionAstroid_triggered()
+{
+    on_astroid_Button_clicked();
+}
+
+void MainWindow::on_actionCircle_triggered()
+{
+    on_circle_Button_clicked();
+}
+
+void MainWindow::on_actionEllipse_triggered()
+{
+    on_ellipse_Button_clicked();
+}
+
+void MainWindow::on_actionHexagon_triggered()
+{
+    on_hexagon_Button_clicked();
+}
+
+void MainWindow::on_actionHypo_triggered()
+{
+    on_hypo_Button_clicked();
+}
+
+void MainWindow::on_actionHuygens_triggered()
+{
+    on_huyg_Button_clicked();
+}
+
+void MainWindow::on_actionLines_triggered()
+{
+    on_lineButton_clicked();
+}
+
+// Equations
+void MainWindow::on_actionLimits_triggered()
+{
+    on_limitsButton_clicked();
+}
+
+void MainWindow::on_actionDerivatives_triggered()
+{
+    on_derivativesButton_clicked();
+}
+
+void MainWindow::on_actionIntegrals_triggered()
+{
+    on_integralsButton_clicked();
 }
 
