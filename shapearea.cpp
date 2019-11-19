@@ -7,7 +7,7 @@
 ///using css to set up the backgrounf of the shaoe area
 /// this is set to blue
 ShapeArea::ShapeArea(QWidget *parent) : QWidget(parent),
-    background_color(0,0,255),
+    background_color(0,0,0),
     shape_color(255,255,255),
     pen(Qt::white),
     Shape(Astroid)
@@ -200,6 +200,10 @@ QPointF ShapeArea::drawEllipse(float t)
     return QPointF(edge1*cos(t), edge2*sin(t));
 
 }
+
+
+
+
 
 
 
