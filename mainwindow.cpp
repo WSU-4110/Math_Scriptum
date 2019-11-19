@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QListWidget>
-
+#include "shapewindow.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -487,3 +487,9 @@ void MainWindow::on_integralsButton_clicked()
     return;
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    shapewindow = new ShapeWindow(this);
+    shapewindow->show();
+}

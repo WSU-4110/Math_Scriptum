@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QList>
 #include <QListWidgetItem>
-
+#include "shapewindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -92,9 +92,12 @@ private slots:
 
    void on_shape12Button_clicked();
 
+   void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
+    ShapeWindow * shapewindow;
 private:
     void update_UserInterface ();
 };
