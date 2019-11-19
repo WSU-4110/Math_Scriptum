@@ -28,29 +28,25 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     notearea.cpp \
-
     shapearea.cpp \
-    shapewindow.cpp
-
+    shapewindow.cpp \
     print.cpp \
-    shapearea.cpp
+
 
 
 HEADERS += \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
-
     shapearea.h \
-    shapewindow.h
-
+    shapewindow.h \
     print.h \
-    shapearea.h
+
 
 
 FORMS += \
     mainwindow.ui \
-    shapewindow.ui
+    shapewindow.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
