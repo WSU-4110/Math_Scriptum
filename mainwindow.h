@@ -87,6 +87,8 @@ private slots:
 
    void on_printButton_clicked();
 
+   void keyboardShortcuts();
+
 private:
     Ui::MainWindow *ui;
     QString filePath;

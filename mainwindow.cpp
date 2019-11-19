@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QListWidget>
+#include <QShortcut>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -366,5 +367,17 @@ void MainWindow::on_printButton_clicked()
 
     ///call print to PDF method with arguments note area string and image of graph
     obj.printToPDF(this->ui->textEdit->toPlainText(), image);
+
+}
+
+void MainWindow::keyboardShortcuts()
+{
+    QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_1), this->ui->equationsArea);
+    //QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_1), this->ui->equationsArea);
+    QObject::connect(line, &QShortcut::activated, this, &MainWindow::on_lineButton_clicked );
+    QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_2), this->ui->equationsArea);
+    //QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_2), this->ui->equationsArea);
+    QObject::connect(parabola, &QShortcut::activated, this, &MainWindow::on_parabolaButton_clicked);
+    //QObject::connect(parabola, &QShortcut::activated, this, SLOT(MainWindow::on_parabolaButton_clicked()));
 
 }
