@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
@@ -27,15 +28,25 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     notearea.cpp \
+
     shapearea.cpp \
     shapewindow.cpp
+
+    print.cpp \
+    shapearea.cpp
+
 
 HEADERS += \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
+
     shapearea.h \
     shapewindow.h
+
+    print.h \
+    shapearea.h
+
 
 FORMS += \
     mainwindow.ui \

@@ -6,8 +6,10 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1237</width>
-    <height>708</height>
+
+    <width>1097</width>
+    <height>754</height>
+
    </rect>
   </property>
   <property name="windowTitle">
@@ -329,6 +331,7 @@ p, li { white-space: pre-wrap; }
        <string>Save Progress</string>
       </property>
      </widget>
+
      <widget class="QPushButton" name="saveImage">
       <property name="font">
        <font>
@@ -634,6 +637,191 @@ p, li { white-space: pre-wrap; }
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+
+    </item>
+    <item row="2" column="3" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="CycloidButton">
+        <property name="text">
+         <string>Cycloid</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="astroid_Button">
+        <property name="text">
+         <string>Astroid</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="circle_Button">
+        <property name="text">
+         <string>circle</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ellipse_Button">
+        <property name="text">
+         <string>Ellipse</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="hexagon_Button">
+        <property name="text">
+         <string>hexagon</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="hypo_Button">
+        <property name="text">
+         <string>Hypo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="invertedCircle_Button">
+        <property name="text">
+         <string>inverted circle</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="huyg_Button">
+        <property name="text">
+         <string>huygens</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="line_Button">
+        <property name="text">
+         <string>Lines</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="createSaveFileButton">
+        <property name="text">
+         <string>Create Save File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="selectSaveFileButton">
+        <property name="text">
+         <string>Select Save File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pasteFromFile">
+        <property name="text">
+         <string>Paste From File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveProgress">
+        <property name="text">
+         <string>Save Progress</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveImage">
+        <property name="text">
+         <string>Save Image</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="limitsButton">
+        <property name="text">
+         <string>Limits</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="derivativesButton">
+        <property name="text">
+         <string>Derivatives</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="integralsButton">
+        <property name="text">
+         <string>Integrals</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="4">
+     <widget class="QWidget" name="NoteArea" native="true">
+      <widget class="QTextEdit" name="textEdit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>611</width>
+         <height>311</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="3" column="4" rowspan="3">
+     <widget class="EquationsArea" name="equationsArea" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Size</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="sScale"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Step</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="sInterval"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Scale/Interval</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="sCount"/>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="3">
+
      <widget class="QPushButton" name="background_color_button">
       <property name="font">
        <font>
@@ -658,9 +846,22 @@ p, li { white-space: pre-wrap; }
        <string>Line Color</string>
       </property>
      </widget>
+
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_6">
+
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="printButton">
+      <property name="text">
+       <string>Print2PDF</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <widget class="QWidget" name="layoutWidget">
+
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -748,8 +949,11 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1237</width>
-     <height>21</height>
+
+
+     <width>1097</width>
+     <height>23</height>
+
     </rect>
    </property>
   </widget>

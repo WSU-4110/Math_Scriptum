@@ -4,7 +4,12 @@
 #include <QMainWindow>
 #include <QList>
 #include <QListWidgetItem>
+
 #include "shapewindow.h"
+
+#include "print.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -84,6 +89,7 @@ private slots:
 
    void on_line_color_button_clicked();
 
+
    //void on_pushButton_clicked();
 
    void on_shape10Button_clicked();
@@ -93,6 +99,11 @@ private slots:
    void on_shape12Button_clicked();
 
    void on_pushButton_clicked();
+
+   void on_printButton_clicked();
+
+   void keyboardShortcuts();
+
 
 private:
     Ui::MainWindow *ui;
