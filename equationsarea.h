@@ -32,11 +32,11 @@ public:
         load_graph_change();
     }
 
-protected:
+    //static float getLengthOfInterval();
+
     ///Function that will draw graph selected in equationsarea widget on main window
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-private:
     ///each function will draw a graph defined by the math functions they represent
     QPointF drawLine(float t);
     QPointF drawParabola(float t);
@@ -49,6 +49,11 @@ private:
     ///Function to set graph scale, length of interval and step count
     void load_graph_change();
 
+
+protected:
+    float length_of_Interval;
+    float Scale;
+    int step_count_of_shape;
     ///use Qcolor class to allow the background color to be changed
     QColor background_color;
 
@@ -57,10 +62,6 @@ private:
 
     ///initialize enum graph type variable
     graph_type Graph;
-
-    float length_of_Interval;
-    float Scale;
-    int step_count_of_shape;
 };
 
 #endif // EQUATIONSAREA_H

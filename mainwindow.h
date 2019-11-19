@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QList>
 #include <QListWidgetItem>
+#include "print.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -83,6 +84,10 @@ private slots:
    void on_background_color_button_clicked();
 
    void on_line_color_button_clicked();
+
+   void on_printButton_clicked();
+
+   void keyboardShortcuts();
 
 private:
     Ui::MainWindow *ui;

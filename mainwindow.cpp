@@ -7,6 +7,8 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QListWidget>
+#include <QShortcut>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -328,6 +330,37 @@ void MainWindow::on_line_color_button_clicked()
 
 }
 
+void MainWindow::on_printButton_clicked()
+{
+    ///Set graph image size and format
+    QImage image(ui->equationsArea->size(), QImage::Format_ARGB32);
+
+    ///Create painter object for image object
+    QPainter painter(&image);
+
+    ///Draw graph in equation area to painter object
+    ui->equationsArea->render(&painter);
+
+    ///Create print class object
+    print obj;
+
+    ///call print to PDF method with arguments note area string and image of graph
+    obj.printToPDF(this->ui->textEdit->toPlainText(), image);
+
+}
+
+void MainWindow::keyboardShortcuts()
+{
+    QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_1), this->ui->equationsArea);
+    //QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_1), this->ui->equationsArea);
+    QObject::connect(line, &QShortcut::activated, this, &MainWindow::on_lineButton_clicked );
+    QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_2), this->ui->equationsArea);
+    //QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_2), this->ui->equationsArea);
+    QObject::connect(parabola, &QShortcut::activated, this, &MainWindow::on_parabolaButton_clicked);
+    //QObject::connect(parabola, &QShortcut::activated, this, SLOT(MainWindow::on_parabolaButton_clicked()));
+
+}
+
 void MainWindow::on_limitsButton_clicked()
 {
 
@@ -459,4 +492,5 @@ void MainWindow::on_integralsButton_clicked()
 
     return;
 }
+
 
