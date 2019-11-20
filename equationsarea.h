@@ -67,9 +67,7 @@ protected:
     ///initialize enum graph type variable
     graph_type Graph;
 
-    float length_of_Interval;
-    float Scale;
-    int step_count_of_shape;
+
 
 
    

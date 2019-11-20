@@ -723,7 +723,7 @@ void MainWindow::on_actionIntegrals_triggered()
     on_integralsButton_clicked();
 
 
-
+}
 
 void MainWindow::on_pushButton_clicked()
 {
