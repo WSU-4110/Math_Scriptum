@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2001</width>
-    <height>708</height>
+    <width>1074</width>
+    <height>707</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Comic Sans MS</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Math Scriptum</string>
@@ -20,9 +25,9 @@
    <widget class="ShapeArea" name="Shapearea" native="true">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>620</x>
       <y>360</y>
-      <width>481</width>
+      <width>451</width>
       <height>291</height>
      </rect>
     </property>
@@ -40,9 +45,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>110</y>
-      <width>571</width>
-      <height>541</height>
+      <y>0</y>
+      <width>611</width>
+      <height>651</height>
      </rect>
     </property>
     <widget class="QTextEdit" name="textEdit">
@@ -50,15 +55,15 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>571</width>
-       <height>541</height>
+       <width>611</width>
+       <height>651</height>
       </rect>
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Comic Sans MS'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
@@ -66,549 +71,92 @@ p, li { white-space: pre-wrap; }
    <widget class="EquationsArea" name="equationsArea" native="true">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>620</x>
       <y>110</y>
-      <width>481</width>
-      <height>251</height>
+      <width>451</width>
+      <height>241</height>
      </rect>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>331</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Parametric Controls</string>
-    </property>
-    <widget class="QSplitter" name="splitter_4">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>311</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QLabel" name="label_3">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Size</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sScale">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Step</string>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="sInterval">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Scale/Interval</string>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="sCount">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>50</y>
-      <width>961</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Shapes</string>
-    </property>
-    <widget class="QPushButton" name="CycloidButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>86</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Cycloid</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="astroid_Button">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>20</y>
-       <width>86</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Astroid</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="circle_Button">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>20</y>
-       <width>76</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Circle</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="ellipse_Button">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>20</y>
-       <width>81</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Ellipse</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="hexagon_Button">
-     <property name="geometry">
-      <rect>
-       <x>300</x>
-       <y>20</y>
-       <width>101</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>MultiLayerd</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="hypo_Button">
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>20</y>
-       <width>73</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Hypo</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="invertedCircle_Button">
-     <property name="geometry">
-      <rect>
-       <x>460</x>
-       <y>20</y>
-       <width>87</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Singular</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="huyg_Button">
-     <property name="geometry">
-      <rect>
-       <x>540</x>
-       <y>20</y>
-       <width>87</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Huygens</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="line_Button">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>20</y>
-       <width>73</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Lines</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="shape10Button">
-     <property name="geometry">
-      <rect>
-       <x>690</x>
-       <y>20</y>
-       <width>87</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Quadrant</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="shape11Button">
-     <property name="geometry">
-      <rect>
-       <x>770</x>
-       <y>20</y>
-       <width>87</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>InvCircle</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="shape12Button">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>20</y>
-       <width>101</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bodoni MT</family>
-       <pointsize>12</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Multi-Sided</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_6">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>0</y>
-      <width>281</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Equations </string>
-    </property>
-    <widget class="QSplitter" name="splitter_3">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>279</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="limitsButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Limits</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="derivativesButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Derivatives</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="integralsButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Integrals</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>20</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NewWindow</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>0</y>
-      <width>351</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Graph Controls</string>
-    </property>
-    <widget class="QSplitter" name="splitter_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>337</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="xRecipButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>1/x</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="sqrtButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Square Root</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="parabolaButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Parabola</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="lineButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>line</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>960</x>
-      <y>60</y>
+      <x>620</x>
+      <y>10</y>
       <width>16</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bodoni MT</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pasteFromFile">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Paste From File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="saveProgress">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save Progress</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="selectSaveFileButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Select Save File</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QGroupBox" name="groupBox_5">
        <property name="font">
         <font>
          <family>Bodoni MT</family>
          <pointsize>12</pointsize>
+         <weight>50</weight>
          <italic>true</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="title">
@@ -627,7 +175,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Bodoni MT</family>
           <pointsize>12</pointsize>
+          <weight>50</weight>
           <italic>true</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -647,7 +197,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Bodoni MT</family>
           <pointsize>12</pointsize>
+          <weight>50</weight>
           <italic>true</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -656,119 +208,486 @@ p, li { white-space: pre-wrap; }
        </widget>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QGroupBox" name="groupBox_3">
+     <item row="2" column="0">
+      <widget class="QPushButton" name="createSaveFileButton">
        <property name="font">
         <font>
          <family>Bodoni MT</family>
          <pointsize>12</pointsize>
+         <weight>50</weight>
          <italic>true</italic>
+         <bold>false</bold>
         </font>
        </property>
-       <property name="title">
-        <string/>
+       <property name="text">
+        <string>Create Save File</string>
        </property>
-       <widget class="QPushButton" name="pasteFromFile">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>30</y>
-          <width>113</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Bodoni MT</family>
-          <pointsize>12</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="text">
-         <string>Paste From File</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="createSaveFileButton">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>20</y>
-          <width>113</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Bodoni MT</family>
-          <pointsize>12</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="text">
-         <string>Create Save File</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="selectSaveFileButton">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>20</y>
-          <width>109</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Bodoni MT</family>
-          <pointsize>12</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="text">
-         <string>Select Save File</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="saveImage">
-        <property name="geometry">
-         <rect>
-          <x>560</x>
-          <y>10</y>
-          <width>82</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Bodoni MT</family>
-          <pointsize>12</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="text">
-         <string>Save Image</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="saveProgress">
-        <property name="geometry">
-         <rect>
-          <x>440</x>
-          <y>20</y>
-          <width>98</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Bodoni MT</family>
-          <pointsize>12</pointsize>
-          <italic>true</italic>
-         </font>
-        </property>
-        <property name="text">
-         <string>Save Progress</string>
-        </property>
-       </widget>
       </widget>
+     </item>
+     <item row="0" column="4" rowspan="3">
+      <widget class="QPushButton" name="saveImage">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout"/>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>50</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="invertedCircle_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Singular</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="hexagon_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>MultiLayerd</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="hypo_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Hypo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QPushButton" name="shape12Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Multi-Sided</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="shape11Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>InvCircle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="ellipse_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ellipse</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="2">
+      <widget class="QPushButton" name="line_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Lines</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0" colspan="2">
+      <widget class="QPushButton" name="circle_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Circle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0" colspan="2">
+      <widget class="QPushButton" name="huyg_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Huygens</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0" colspan="2">
+      <widget class="QPushButton" name="CycloidButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Cycloid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="0" colspan="2">
+      <widget class="QPushButton" name="astroid_Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Astroid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="2">
+      <widget class="QPushButton" name="shape10Button">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Quadrant</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>421</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="xRecipButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>1/x</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="sqrtButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Square Root</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="parabolaButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Parabola</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="lineButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>line</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="limitsButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Limits</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="derivativesButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Derivatives</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="integralsButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Integrals</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>418</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>OPen</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="sCount">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Parametric</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QDoubleSpinBox" name="sInterval">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Stepper</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QDoubleSpinBox" name="sScale">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -778,8 +697,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2001</width>
-     <height>21</height>
+     <width>1074</width>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSave_Controls">
