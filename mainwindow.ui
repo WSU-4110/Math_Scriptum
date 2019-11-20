@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1237</width>
+    <width>2001</width>
     <height>708</height>
    </rect>
   </property>
@@ -20,10 +20,10 @@
    <widget class="ShapeArea" name="Shapearea" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>493</width>
-      <height>561</height>
+      <x>570</x>
+      <y>360</y>
+      <width>481</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -39,10 +39,10 @@
    <widget class="QWidget" name="NoteArea" native="true">
     <property name="geometry">
      <rect>
-      <x>501</x>
-      <y>139</y>
+      <x>0</x>
+      <y>110</y>
       <width>571</width>
-      <height>301</height>
+      <height>541</height>
      </rect>
     </property>
     <widget class="QTextEdit" name="textEdit">
@@ -50,26 +50,26 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>561</width>
-       <height>301</height>
+       <width>571</width>
+       <height>541</height>
       </rect>
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
    <widget class="EquationsArea" name="equationsArea" native="true">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>440</y>
-      <width>571</width>
-      <height>261</height>
+      <x>570</x>
+      <y>110</y>
+      <width>481</width>
+      <height>251</height>
      </rect>
     </property>
    </widget>
@@ -79,7 +79,7 @@ p, li { white-space: pre-wrap; }
       <x>0</x>
       <y>0</y>
       <width>331</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -169,187 +169,13 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>0</y>
-      <width>351</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Graph Controls</string>
-    </property>
-    <widget class="QSplitter" name="splitter_2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>337</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="xRecipButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>1/x</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="sqrtButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Square Root</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="parabolaButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Parabola</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="lineButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>line</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>90</y>
-      <width>641</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Save Options</string>
-    </property>
-    <widget class="QSplitter" name="splitter_6">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>628</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="createSaveFileButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Create Save File</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="selectSaveFileButton">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Select Save File</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pasteFromFile">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Paste From File</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveProgress">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Save Progress</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="saveImage">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Save Image</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
-      <width>971</width>
-      <height>51</height>
+      <y>50</y>
+      <width>961</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -603,70 +429,13 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_5">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>90</y>
-      <width>331</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bodoni MT</family>
-      <pointsize>12</pointsize>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="title">
-     <string>Color Options</string>
-    </property>
-    <widget class="QSplitter" name="splitter_5">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>251</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <widget class="QPushButton" name="background_color_button">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Background Color</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="line_color_button">
-      <property name="font">
-       <font>
-        <family>Bodoni MT</family>
-        <pointsize>12</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>Line Color</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QGroupBox" name="groupBox_6">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>770</x>
       <y>0</y>
-      <width>291</width>
-      <height>51</height>
+      <width>281</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -732,15 +501,276 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>980</x>
-      <y>90</y>
+      <x>340</x>
+      <y>20</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>OPEN</string>
+     <string>NewWindow</string>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>0</y>
+      <width>351</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bodoni MT</family>
+      <pointsize>12</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="title">
+     <string>Graph Controls</string>
+    </property>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>337</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="xRecipButton">
+      <property name="font">
+       <font>
+        <family>Bodoni MT</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>1/x</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sqrtButton">
+      <property name="font">
+       <font>
+        <family>Bodoni MT</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Square Root</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="parabolaButton">
+      <property name="font">
+       <font>
+        <family>Bodoni MT</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Parabola</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lineButton">
+      <property name="font">
+       <font>
+        <family>Bodoni MT</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>line</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>60</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="background_color_button">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>123</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Background Color</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="line_color_button">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>50</y>
+          <width>75</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Line Color</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QPushButton" name="pasteFromFile">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>30</y>
+          <width>113</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Paste From File</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="createSaveFileButton">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>113</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Create Save File</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="selectSaveFileButton">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>20</y>
+          <width>109</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Select Save File</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="saveImage">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>10</y>
+          <width>82</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Save Image</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="saveProgress">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>20</y>
+          <width>98</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bodoni MT</family>
+          <pointsize>12</pointsize>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="text">
+         <string>Save Progress</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -748,10 +778,66 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1237</width>
-     <height>22</height>
+     <width>2001</width>
+     <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuSave_Controls">
+    <property name="title">
+     <string>Save Controls</string>
+    </property>
+    <addaction name="actionCreate_Save_File"/>
+    <addaction name="actionSelect_Save_File"/>
+    <addaction name="actionPaste_From_File"/>
+    <addaction name="actionSave_Progress"/>
+    <addaction name="actionSave_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuGraph_Controls">
+    <property name="title">
+     <string>Graph Controls</string>
+    </property>
+    <addaction name="action1_x"/>
+    <addaction name="actionSquare_Root"/>
+    <addaction name="actionParabola"/>
+    <addaction name="actionLine"/>
+   </widget>
+   <widget class="QMenu" name="menuColor_Control">
+    <property name="title">
+     <string>Color Control</string>
+    </property>
+    <addaction name="actionBackground_Color"/>
+    <addaction name="actionLine_Color"/>
+   </widget>
+   <widget class="QMenu" name="menuShapes">
+    <property name="title">
+     <string>Shapes</string>
+    </property>
+    <addaction name="actionCycloid"/>
+    <addaction name="actionAstroid"/>
+    <addaction name="actionCircle"/>
+    <addaction name="actionEllipse"/>
+    <addaction name="actionMultiLayerd"/>
+    <addaction name="actionHypo"/>
+    <addaction name="actionSingular"/>
+    <addaction name="actionHuygens"/>
+    <addaction name="actionLines"/>
+    <addaction name="actionQuadrant"/>
+    <addaction name="actionInvCircle"/>
+    <addaction name="actionMulti_Sided"/>
+   </widget>
+   <widget class="QMenu" name="menuEquations">
+    <property name="title">
+     <string>Equations</string>
+    </property>
+    <addaction name="actionLimits"/>
+    <addaction name="actionDerivatives"/>
+    <addaction name="actionIntegrals"/>
+   </widget>
+   <addaction name="menuSave_Controls"/>
+   <addaction name="menuGraph_Controls"/>
+   <addaction name="menuColor_Control"/>
+   <addaction name="menuShapes"/>
+   <addaction name="menuEquations"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -771,6 +857,141 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </attribute>
   </widget>
+  <action name="actionCreate_Save_File">
+   <property name="text">
+    <string>Create Save File</string>
+   </property>
+  </action>
+  <action name="actionSelect_Save_File">
+   <property name="text">
+    <string>Select Save File</string>
+   </property>
+  </action>
+  <action name="actionPaste_From_File">
+   <property name="text">
+    <string>Paste From File</string>
+   </property>
+  </action>
+  <action name="actionSave_Progress">
+   <property name="text">
+    <string>Save Progress</string>
+   </property>
+  </action>
+  <action name="actionSave_Image">
+   <property name="text">
+    <string>Save Image</string>
+   </property>
+  </action>
+  <action name="action1_x">
+   <property name="text">
+    <string>1/x</string>
+   </property>
+  </action>
+  <action name="actionSquare_Root">
+   <property name="text">
+    <string>Square Root</string>
+   </property>
+  </action>
+  <action name="actionParabola">
+   <property name="text">
+    <string>Parabola</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="text">
+    <string>Line</string>
+   </property>
+  </action>
+  <action name="actionBackground_Color">
+   <property name="text">
+    <string>Background Color</string>
+   </property>
+  </action>
+  <action name="actionLine_Color">
+   <property name="text">
+    <string>Line Color</string>
+   </property>
+  </action>
+  <action name="actionCycloid">
+   <property name="text">
+    <string>Cycloid</string>
+   </property>
+  </action>
+  <action name="actionAstroid">
+   <property name="text">
+    <string>Astroid</string>
+   </property>
+  </action>
+  <action name="actionCircle">
+   <property name="text">
+    <string>Circle</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="text">
+    <string>Ellipse</string>
+   </property>
+  </action>
+  <action name="actionMultiLayerd">
+   <property name="text">
+    <string>MultiLayerd</string>
+   </property>
+  </action>
+  <action name="actionHypo">
+   <property name="text">
+    <string>Hypo</string>
+   </property>
+  </action>
+  <action name="actionSingular">
+   <property name="text">
+    <string>Singular</string>
+   </property>
+  </action>
+  <action name="actionHuygens">
+   <property name="text">
+    <string>Huygens</string>
+   </property>
+  </action>
+  <action name="actionLines">
+   <property name="text">
+    <string>Lines</string>
+   </property>
+  </action>
+  <action name="actionQuadrant">
+   <property name="text">
+    <string>Quadrant</string>
+   </property>
+  </action>
+  <action name="actionInvCircle">
+   <property name="text">
+    <string>InvCircle</string>
+   </property>
+  </action>
+  <action name="actionMulti_Sided">
+   <property name="text">
+    <string>Multi-Sided</string>
+   </property>
+  </action>
+  <action name="actionLimits">
+   <property name="text">
+    <string>Limits</string>
+   </property>
+  </action>
+  <action name="actionDerivatives">
+   <property name="text">
+    <string>Derivatives</string>
+   </property>
+  </action>
+  <action name="actionIntegrals">
+   <property name="text">
+    <string>Integrals</string>
+   </property>
+  </action>
+  <action name="actionNewWindow">
+   <property name="text">
+    <string>NewWindow</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
