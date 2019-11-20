@@ -37,6 +37,9 @@ public:
          Ellipse,
          hexagon,
          Lines,
+         shape10,
+         shape11,
+         shape12,
          General
      };
      ///All setters anbd getters class functions to draw 2D shapes in the shape area window
@@ -129,6 +132,10 @@ private:
    QPointF drawGeneral(float t);
    QPointF drawEllipse(float t);
    QPointF drawHexagon(float t);
+   QPointF drawShape10(float t);
+   QPointF drawShape11(float t);
+   QPointF drawShape12(float t);
+
    void load_shape_change();
 
 

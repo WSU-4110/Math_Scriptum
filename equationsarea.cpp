@@ -1,12 +1,15 @@
 #include "equationsarea.h"
 
 EquationsArea::EquationsArea(QWidget *parent) : QWidget(parent),
+
     background_color(255,255,255),
     graph_color(0,0,0),
+
     Graph(Line)
 {
       load_graph_change();
 }
+
 
 QPointF EquationsArea::drawGeneral(float t)
 {
@@ -76,7 +79,9 @@ QPointF EquationsArea::drawYAxis(float t)
     return QPointF(0, y);
 }
 
-void EquationsArea::paintEvent(QPaintEvent *event)
+
+
+void  EquationsArea::paintEvent(QPaintEvent *event)
 {
     float step = length_of_Interval / step_count_of_shape;
     QPainter painter(this); ///calling "this"
@@ -131,4 +136,6 @@ void EquationsArea::paintEvent(QPaintEvent *event)
         previous_pixel = single_pixel;
     }
 }
+
+
 

@@ -5,6 +5,11 @@
 #include <QList>
 #include <QListWidgetItem>
 
+#include "shapewindow.h"
+
+#include "print.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -84,6 +89,7 @@ private slots:
 
    void on_line_color_button_clicked();
 
+
    // Menu bar actions
    // Save Control
    void on_actionCreate_Save_File_triggered();
@@ -134,9 +140,27 @@ private slots:
 
    void on_actionIntegrals_triggered();
 
+
+   //void on_pushButton_clicked();
+
+   void on_shape10Button_clicked();
+
+   void on_shape11Button_clicked();
+
+   void on_shape12Button_clicked();
+
+   void on_pushButton_clicked();
+
+   void on_printButton_clicked();
+
+   void keyboardShortcuts();
+
+
+
 private:
     Ui::MainWindow *ui;
     QString filePath;
+    ShapeWindow * shapewindow;
 private:
     void update_UserInterface ();
 };

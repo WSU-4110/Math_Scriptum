@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
@@ -27,16 +28,25 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     notearea.cpp \
-    shapearea.cpp
+    shapearea.cpp \
+    shapewindow.cpp \
+    print.cpp \
+
+
 
 HEADERS += \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
-    shapearea.h
+    shapearea.h \
+    shapewindow.h \
+    print.h \
+
+
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    shapewindow.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -8,6 +8,12 @@
 #include <QTextStream>
 #include <QListWidget>
 
+#include "shapewindow.h"
+
+#include <QShortcut>
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -243,7 +249,9 @@ void MainWindow::on_ellipse_Button_clicked()
 
 void MainWindow::on_invertedCircle_Button_clicked()
 {
-
+    this->ui->Shapearea->set_up_Shape(ShapeArea::Line);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
 }
 
 void MainWindow::on_hypo_Button_clicked()
@@ -328,6 +336,7 @@ void MainWindow::on_line_color_button_clicked()
 
 }
 
+
 void MainWindow::on_limitsButton_clicked()
 {
 
@@ -340,6 +349,74 @@ void MainWindow::on_limitsButton_clicked()
     QPixmap pm2 = QPixmap::fromImage(img2);
     pm2 = pm2.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
+}
+
+
+
+void MainWindow::on_shape10Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape10);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+void MainWindow::on_shape11Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape11);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+void MainWindow::on_shape12Button_clicked()
+{
+    this->ui->Shapearea->set_up_Shape(ShapeArea::shape12);
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+}
+
+
+void MainWindow::on_printButton_clicked()
+{
+    ///Set graph image size and format
+    QImage image(ui->equationsArea->size(), QImage::Format_ARGB32);
+
+    ///Create painter object for image object
+    QPainter painter(&image);
+
+    ///Draw graph in equation area to painter object
+    ui->equationsArea->render(&painter);
+
+    ///Create print class object
+    print obj;
+
+    ///call print to PDF method with arguments note area string and image of graph
+    obj.printToPDF(this->ui->textEdit->toPlainText(), image);
+
+}
+
+void MainWindow::keyboardShortcuts()
+{
+    QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_1), this->ui->equationsArea);
+    //QShortcut *line = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_1), this->ui->equationsArea);
+    QObject::connect(line, &QShortcut::activated, this, &MainWindow::on_lineButton_clicked );
+    QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_G + Qt::Key_2), this->ui->equationsArea);
+    //QShortcut *parabola = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_2), this->ui->equationsArea);
+    QObject::connect(parabola, &QShortcut::activated, this, &MainWindow::on_parabolaButton_clicked);
+    //QObject::connect(parabola, &QShortcut::activated, this, SLOT(MainWindow::on_parabolaButton_clicked()));
+
+}
+
+/*
+void MainWindow::on_limitsButton_clicked()
+{
+
+    QImage img1("/Users/sishirbuddha/Desktop/Limits1.png");
+    QPixmap pm = QPixmap::fromImage(img1);
+
+    QImage img2("/Users/sishirbuddha/Desktop/Limits2.png");
+    QPixmap pm2 = QPixmap::fromImage(img2);
+
 
     QMessageBox displayLimits;
     QMessageBox displayLimits2;
@@ -348,21 +425,26 @@ void MainWindow::on_limitsButton_clicked()
     displayLimits.setText("Limits Page One");
     displayLimits.setIconPixmap(pm);
     displayLimits.icon();
+
     displayLimits.setBaseSize(1000,1000);
+
     displayLimits.exec();
 
     displayLimits2.setWindowTitle("Limits Page Two");
     displayLimits2.setText("Limits Page Two");
     displayLimits2.setIconPixmap(pm);
     displayLimits2.icon();
+
     displayLimits2.setBaseSize(1000,1000);
+
     displayLimits2.exec();
 
     return;
 }
-
+*/
 void MainWindow::on_derivativesButton_clicked()
 {
+
 
     QImage img1(":/resources/images/Deriv1.png");
     QPixmap pm = QPixmap::fromImage(img1);
@@ -383,6 +465,7 @@ void MainWindow::on_derivativesButton_clicked()
     pm4 = pm4.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
+
     QMessageBox displayDerivatives;
     QMessageBox displayDerivatives2;
     QMessageBox displayDerivatives3;
@@ -393,28 +476,36 @@ void MainWindow::on_derivativesButton_clicked()
     displayDerivatives.setText("Derivatives Page One");
     displayDerivatives.setIconPixmap(pm);
     displayDerivatives.icon();
+
     displayDerivatives.setBaseSize(1000,1000);
+
     displayDerivatives.exec();
 
     displayDerivatives2.setWindowTitle("Derivatives Page Two");
     displayDerivatives2.setText("Derivatives Page Two");
     displayDerivatives2.setIconPixmap(pm2);
     displayDerivatives2.icon();
+
     displayDerivatives2.setBaseSize(1000,1000);
+
     displayDerivatives2.exec();
 
     displayDerivatives3.setWindowTitle("Derivatives Page Three");
     displayDerivatives3.setText("Derivatives Page Three");
     displayDerivatives3.setIconPixmap(pm3);
     displayDerivatives3.icon();
+
     displayDerivatives3.setBaseSize(1000,1000);
+
     displayDerivatives3.exec();
 
     displayDerivatives4.setWindowTitle("Derivatives Page Four");
     displayDerivatives4.setText("Derivatives Page Four");
     displayDerivatives4.setIconPixmap(pm4);
     displayDerivatives4.icon();
+
     displayDerivatives4.setBaseSize(1000,1000);
+
     displayDerivatives4.exec();
 
     return;
@@ -423,6 +514,7 @@ void MainWindow::on_derivativesButton_clicked()
 
 void MainWindow::on_integralsButton_clicked()
 {
+
     QImage img1(":/resources/images/Int1.png");
     QPixmap pm = QPixmap::fromImage(img1);
         pm = pm.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -448,6 +540,7 @@ void MainWindow::on_integralsButton_clicked()
     pm5 = pm5.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
 
+
     QMessageBox displayIntegrals;
     QMessageBox displayIntegrals2;
     QMessageBox displayIntegrals3;
@@ -458,7 +551,9 @@ void MainWindow::on_integralsButton_clicked()
     displayIntegrals.setText("Integrals Page One");
     displayIntegrals.setIconPixmap(pm);
     displayIntegrals.icon();
+
         displayIntegrals.setBaseSize(1000,1000);
+
 
     displayIntegrals.exec();
 
@@ -466,7 +561,9 @@ void MainWindow::on_integralsButton_clicked()
     displayIntegrals2.setText("Integrals Page Two");
     displayIntegrals2.setIconPixmap(pm2);
     displayIntegrals2.icon();
+
            displayIntegrals2.setBaseSize(1000,1000);
+
 
     displayIntegrals2.exec();
 
@@ -474,7 +571,9 @@ void MainWindow::on_integralsButton_clicked()
     displayIntegrals3.setText("Integrals Page Three");
     displayIntegrals3.setIconPixmap(pm3);
     displayIntegrals3.icon();
+
             displayIntegrals3.setBaseSize(1000,1000);
+
 
     displayIntegrals3.exec();
 
@@ -482,20 +581,28 @@ void MainWindow::on_integralsButton_clicked()
     displayIntegrals4.setText("Integrals Page Four");
     displayIntegrals4.setIconPixmap(pm4);
     displayIntegrals4.icon();
+
             displayIntegrals4.setBaseSize(1000,1000);
+
 
     displayIntegrals4.exec();
 
     displayIntegrals5.setWindowTitle("Integrals Page Five");
     displayIntegrals5.setText("Integrals Page Five");
+
     displayIntegrals5.setIconPixmap(pm5);
     displayIntegrals5.icon();
             displayIntegrals5.setBaseSize(1000,1000);
+
+
+    displayIntegrals5.setIconPixmap(pm);
+    displayIntegrals5.icon();
 
     displayIntegrals5.exec();
 
     return;
 }
+
 // Menu Bar Items
 
 // Save Controls
@@ -614,5 +721,14 @@ void MainWindow::on_actionDerivatives_triggered()
 void MainWindow::on_actionIntegrals_triggered()
 {
     on_integralsButton_clicked();
+
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    shapewindow = new ShapeWindow(this);
+    shapewindow->show();
+
 }
 
