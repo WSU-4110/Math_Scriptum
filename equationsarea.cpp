@@ -1,12 +1,15 @@
 #include "equationsarea.h"
 
 EquationsArea::EquationsArea(QWidget *parent) : QWidget(parent),
-    background_color(0,0,0),
-    graph_color(255,255,255),
+
+    background_color(255,255,255),
+    graph_color(0,0,0),
+
     Graph(Line)
 {
       load_graph_change();
 }
+
 
 QPointF EquationsArea::drawGeneral(float t)
 {
@@ -133,5 +136,6 @@ void  EquationsArea::paintEvent(QPaintEvent *event)
         previous_pixel = single_pixel;
     }
 }
+
 
 
