@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1074</width>
-    <height>707</height>
+    <width>1076</width>
+    <height>763</height>
    </rect>
   </property>
   <property name="font">
@@ -26,9 +26,9 @@
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>360</y>
+      <y>290</y>
       <width>451</width>
-      <height>291</height>
+      <height>411</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -45,9 +45,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>110</y>
       <width>611</width>
-      <height>651</height>
+      <height>591</height>
      </rect>
     </property>
     <widget class="QTextEdit" name="textEdit">
@@ -56,7 +56,7 @@
        <x>0</x>
        <y>0</y>
        <width>611</width>
-       <height>651</height>
+       <height>591</height>
       </rect>
      </property>
      <property name="html">
@@ -72,19 +72,19 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>110</y>
+      <y>0</y>
       <width>451</width>
-      <height>241</height>
+      <height>281</height>
      </rect>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>10</y>
+      <x>440</x>
+      <y>0</y>
       <width>16</width>
-      <height>31</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
@@ -113,38 +113,6 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>Paste From File</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="QPushButton" name="saveProgress">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Save Progress</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QPushButton" name="selectSaveFileButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Select Save File</string>
        </property>
       </widget>
      </item>
@@ -208,6 +176,22 @@ p, li { white-space: pre-wrap; }
        </widget>
       </widget>
      </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="selectSaveFileButton">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Select Save File</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
       <widget class="QPushButton" name="createSaveFileButton">
        <property name="font">
@@ -221,6 +205,22 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>Create Save File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="saveProgress">
+       <property name="font">
+        <font>
+         <family>Bodoni MT</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Save Progress</string>
        </property>
       </widget>
      </item>
@@ -242,7 +242,7 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -253,13 +253,13 @@ p, li { white-space: pre-wrap; }
     </property>
     <layout class="QFormLayout" name="formLayout"/>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>50</y>
+      <x>460</x>
+      <y>0</y>
       <width>20</width>
-      <height>20</height>
+      <height>21</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_2">
@@ -460,148 +460,17 @@ p, li { white-space: pre-wrap; }
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>10</y>
-      <width>421</width>
-      <height>66</height>
+      <x>0</x>
+      <y>0</y>
+      <width>438</width>
+      <height>105</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout_3">
+    <layout class="QGridLayout" name="gridLayout_5">
      <item row="0" column="0">
-      <widget class="QPushButton" name="xRecipButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>1/x</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="sqrtButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Square Root</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="parabolaButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Parabola</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="lineButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>line</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="limitsButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Limits</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="derivativesButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Derivatives</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="integralsButton">
-       <property name="font">
-        <font>
-         <family>Bodoni MT</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Integrals</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>80</y>
-      <width>418</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_4">
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>OPen</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <layout class="QGridLayout" name="gridLayout_2">
+      <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QPushButton" name="xRecipButton">
          <property name="font">
           <font>
            <family>Bodoni MT</family>
@@ -612,12 +481,12 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>Size</string>
+          <string>1/x</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QSpinBox" name="sCount">
+        <widget class="QPushButton" name="sqrtButton">
          <property name="font">
           <font>
            <family>Bodoni MT</family>
@@ -626,11 +495,14 @@ p, li { white-space: pre-wrap; }
            <italic>true</italic>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="text">
+          <string>Square Root</string>
          </property>
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QLabel" name="label_2">
+        <widget class="QPushButton" name="parabolaButton">
          <property name="font">
           <font>
            <family>Bodoni MT</family>
@@ -641,25 +513,12 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>Parametric</string>
+          <string>Parabola</string>
          </property>
         </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QDoubleSpinBox" name="sInterval">
-         <property name="font">
-          <font>
-           <family>Bodoni MT</family>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <italic>true</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4">
-        <widget class="QLabel" name="label">
+        <widget class="QPushButton" name="lineButton">
          <property name="font">
           <font>
            <family>Bodoni MT</family>
@@ -670,12 +529,12 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>Stepper</string>
+          <string>line</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="5">
-        <widget class="QDoubleSpinBox" name="sScale">
+       <item row="1" column="0">
+        <widget class="QPushButton" name="limitsButton">
          <property name="font">
           <font>
            <family>Bodoni MT</family>
@@ -685,7 +544,144 @@ p, li { white-space: pre-wrap; }
            <bold>false</bold>
           </font>
          </property>
+         <property name="text">
+          <string>Limits</string>
+         </property>
         </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="derivativesButton">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Derivatives</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="integralsButton">
+         <property name="font">
+          <font>
+           <family>Bodoni MT</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>true</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Integrals</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>OPen</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Size</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="sCount">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Parametric</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QDoubleSpinBox" name="sInterval">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Stepper</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QDoubleSpinBox" name="sScale">
+           <property name="font">
+            <font>
+             <family>Bodoni MT</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>true</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
@@ -697,8 +693,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1074</width>
-     <height>23</height>
+     <width>1076</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSave_Controls">
