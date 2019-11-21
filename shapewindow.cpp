@@ -1,7 +1,7 @@
 #include "shapewindow.h"
 #include "ui_shapewindow.h"
 #include "shapearea.h"
-#include "ShapeWindow.h"
+#include "shapewindow.h"
 ShapeWindow::ShapeWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ShapeWindow)
