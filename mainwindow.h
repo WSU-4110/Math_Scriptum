@@ -5,6 +5,11 @@
 #include <QList>
 #include <QListWidgetItem>
 
+#include "shapewindow.h"
+
+#include "print.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -79,9 +84,6 @@ private slots:
 
    void on_integralsButton_clicked();
 
-
-<<<<<<< Updated upstream
-=======
    void on_background_color_button_clicked();
 
    void on_line_color_button_clicked();
@@ -153,7 +155,6 @@ private slots:
    void keyboardShortcuts();
 
 
-
    void on_pushButton_3_clicked();
 
    void on_openButton_clicked();
@@ -163,11 +164,11 @@ private slots:
    void on_pushButton_2_clicked();
 
    void on_selectSaveState_clicked();
-
->>>>>>> Stashed changes
+   
 private:
     Ui::MainWindow *ui;
     QString filePath;
+    ShapeWindow * shapewindow;
 private:
     void update_UserInterface ();
 };

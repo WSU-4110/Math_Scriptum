@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>images/Deriv1.png</file>
+        <file>images/Deriv2.png</file>
+        <file>images/Deriv3.png</file>
+        <file>images/Deriv4.png</file>
+        <file>images/Int1.png</file>
+        <file>images/Int2.png</file>
+        <file>images/Int3.png</file>
+        <file>images/Int4.png</file>
+        <file>images/Int5.png</file>
+        <file>images/Limits1.png</file>
+        <file>images/Limits2.png</file>
+    </qresource>
+</RCC>

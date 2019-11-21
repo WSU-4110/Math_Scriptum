@@ -57,6 +57,14 @@ QPointF ShapeArea::drawGeneral(float t)
         break;
     case Lines:
         return drawLines(t);
+    case shape10:
+        return drawShape10(t);
+        break;
+    case shape11:
+        return drawShape11(t);
+        break;
+    case shape12:
+        return drawShape12(t);
         break;
     case General:
         return drawGeneral(t);
@@ -100,8 +108,8 @@ void ShapeArea::load_shape_change()
         step_count_of_shape = 139;
         break;
    case Line:
-        Scale = 15;
-        length_of_Interval = 2;
+        Scale = 5;
+        length_of_Interval = 1;
         step_count_of_shape = 129;
         break;
    case Ellipse:
@@ -110,9 +118,24 @@ void ShapeArea::load_shape_change()
         step_count_of_shape = 225;
         break;
    case hexagon:
-        Scale = 12;
-        length_of_Interval = 5 * M_PI;
-        step_count_of_shape = 234;
+        Scale = 10;
+        length_of_Interval = 11 * M_PI;
+        step_count_of_shape = 534;
+        break;
+    case shape10:
+         Scale = 25;
+         length_of_Interval = 2 * M_PI;
+         step_count_of_shape = 255;
+        break;
+    case shape11:
+         Scale = 10;
+         length_of_Interval = 12 * M_PI;
+         step_count_of_shape = 555;
+        break;
+    case shape12:
+         Scale = 15;
+         length_of_Interval = 6.6666 * M_PI;
+         step_count_of_shape = 339;
         break;
 
 
@@ -143,6 +166,14 @@ QPointF ShapeArea::drawHypo(float t)
 QPointF ShapeArea::drawLine(float t)
 {
     ///implement
+    float t1 = 19;
+    float t2 = 5;
+    float t3 = 19;
+
+    float x = (t1 - t2) * cos (t) + t3 * cos (t * ((t1 - t2) / t2));
+    float y = (t1 - t2) * sin (t) - t3 * sin (t * ((t1 - t2) / t2));
+
+    return QPointF (x, y);
 }
 
 QPointF ShapeArea::drawCircle(float t)
@@ -178,17 +209,43 @@ QPointF ShapeArea::drawLines(float t)
 
 QPointF ShapeArea::drawHexagon(float t)
 {
+    float vertex = 15;
+    float secondVertex = 5.123987612132;
+
+    float x = vertex * cos (t) - secondVertex * cos (vertex / secondVertex * t);
+    float y = vertex * sin (t) - secondVertex * sin (vertex / secondVertex * t);
+return QPointF (x,y);
+}
+
+QPointF ShapeArea::drawShape10(float t)
+{
     float cos_t = cos(t);
     float sin_t = sin(t);
+    float x = 6 * cos_t * cos_t * cos_t * cos_t;
+    float y = 6 * sin_t * sin_t * sin_t * sin_t;
+    return QPointF(x, y);
+}
 
-    float theta_t = 1.186822;
+QPointF ShapeArea::drawShape11(float t)
+{
+        float vertex = 15;
+        float secondVertex = 4;
 
-    float x = 2*cos(theta_t) * ((cos(M_PI/5)/cos((2*M_PI/5) * (theta_t/(2*theta_t/5) - (theta_t/(2*theta_t/5))) - M_PI)));
-    float y = 2*sin(theta_t) * ((cos(M_PI/5)/cos((2*M_PI/5) * (theta_t/(2*theta_t/5) - (theta_t/(2*theta_t/5))) - M_PI)));
+        float x = vertex * cos (t) - secondVertex * cos (vertex / secondVertex * t);
+        float y = vertex * sin (t) - secondVertex * sin (vertex / secondVertex * t);
+    return QPointF (x,y);
+}
 
-    return QPointF(x,y);
+QPointF ShapeArea::drawShape12(float t)
+{
+      float t1 = 9;
+      float t2 = 4;
+      float t3 = 9;
 
+      float x = (t1 - t2) * cos (t) + t3 * cos (t * ((t1 - t2) / t2));
+      float y = (t1 - t2) * sin (t) - t3 * sin (t * ((t1 - t2) / t2));
 
+      return QPointF (x, y);
 }
 
 QPointF ShapeArea::drawEllipse(float t)
@@ -199,11 +256,8 @@ QPointF ShapeArea::drawEllipse(float t)
 
 }
 
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
 ///main function of the shape area class
 void ShapeArea::paintEvent(QPaintEvent *event)
 {
