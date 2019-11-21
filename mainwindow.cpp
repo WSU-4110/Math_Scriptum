@@ -336,23 +336,6 @@ void MainWindow::on_line_color_button_clicked()
 
 }
 
-
-void MainWindow::on_limitsButton_clicked()
-{
-
-    QImage img1(":/resources/images/Limits1.png");
-    QPixmap pm = QPixmap::fromImage(img1);
-    pm = pm.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-
-
-    QImage img2(":/resources/images/Limits2.png");
-    QPixmap pm2 = QPixmap::fromImage(img2);
-    pm2 = pm2.scaled(800, 800, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-
-}
-
-
-
 void MainWindow::on_shape10Button_clicked()
 {
     this->ui->Shapearea->set_up_Shape(ShapeArea::shape10);
@@ -407,14 +390,14 @@ void MainWindow::keyboardShortcuts()
 
 }
 
-/*
+
 void MainWindow::on_limitsButton_clicked()
 {
 
-    QImage img1("/Users/sishirbuddha/Desktop/Limits1.png");
+    QImage img1(":/resources/images/Limits1.png");
     QPixmap pm = QPixmap::fromImage(img1);
 
-    QImage img2("/Users/sishirbuddha/Desktop/Limits2.png");
+    QImage img2(":/resources/images/Limits2.png");
     QPixmap pm2 = QPixmap::fromImage(img2);
 
 
@@ -432,7 +415,7 @@ void MainWindow::on_limitsButton_clicked()
 
     displayLimits2.setWindowTitle("Limits Page Two");
     displayLimits2.setText("Limits Page Two");
-    displayLimits2.setIconPixmap(pm);
+    displayLimits2.setIconPixmap(pm2);
     displayLimits2.icon();
 
     displayLimits2.setBaseSize(1000,1000);
@@ -441,7 +424,7 @@ void MainWindow::on_limitsButton_clicked()
 
     return;
 }
-*/
+
 void MainWindow::on_derivativesButton_clicked()
 {
 
