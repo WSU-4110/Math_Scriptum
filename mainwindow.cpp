@@ -735,7 +735,7 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_createSaveState_clicked()
 {
     /// The location (path) of the state file is set.
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"), "/home/jana/untitled.txt", tr("Text (*.txt)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save State"), "/home/jana/untitled.txt", tr("Text (*.txt)"));
 
     /// StateFile is a QFile object to check if a state file has been created by the user.
     QFile StateFile(fileName);
@@ -780,9 +780,6 @@ void MainWindow::on_selectSaveState_clicked()
         QMessageBox::warning(this, "Warning!","No state file has been SELECTED!");
         return;
     }
-
-    /// The file path (location) of the state file is set.
-    filePath = fileName;
 
     /// A QTextStream object called out is used to read from the selected state file.
     QTextStream in(&StateFile);
