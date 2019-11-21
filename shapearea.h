@@ -42,6 +42,58 @@ public:
          shape12,
          General
      };
+
+     void setShapeFromSaveState(int n)
+          {
+              shape_type i;
+
+              switch (n)
+              {
+              case 0:
+                  i = Line;
+                  break;
+              case 1:
+                  i = Astroid;
+                  break;
+              case 2:
+                  i = Cycloid;
+                  break;
+              case 3:
+                  i = Hype;
+                  break;
+              case 4:
+                  i = Huygens;
+                  break;
+              case 5:
+                  i = Circle;
+                  break;
+              case 6:
+                  i = Ellipse;
+                  break;
+              case 7:
+                  i = hexagon;
+                  break;
+              case 8:
+                  i = Lines;
+                  break;
+              case 9:
+                  i = shape10;
+                  break;
+              case 10:
+                  i = shape11;
+                  break;
+              case 11:
+                  i = shape12;
+                  break;
+              case 12:
+                  i = General;
+                  break;
+              default:
+                  i = Line;
+                  break;
+              }
+              set_up_Shape(i);
+          }
      ///All setters anbd getters class functions to draw 2D shapes in the shape area window
     void set_up_Shape(shape_type shape)
     {

@@ -155,6 +155,8 @@ private slots:
 
    void keyboardShortcuts();
 
+   void on_createSaveState_clicked();
+   void on_selectSaveState_clicked();
 
 
 private:

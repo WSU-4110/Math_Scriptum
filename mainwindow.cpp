@@ -732,3 +732,102 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
+void MainWindow::on_createSaveState_clicked()
+{
+    /// The location (path) of the state file is set.
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Create Save File"), "/home/jana/untitled.txt", tr("Text (*.txt)"));
+
+    /// StateFile is a QFile object to check if a state file has been created by the user.
+    QFile StateFile(fileName);
+
+    if (!StateFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
+    {
+        /// If no state file is create, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","No state file has been CREATED! Until a state file is created or selected, nothing will be saved!");
+        return;
+    }
+
+    /// Clear the state file just in case something is there (replaced file).
+    StateFile.resize(0);
+
+    /// A QTextStream object called out is used to write to the selected state file.
+    QTextStream out(&StateFile);
+
+    /// Record/write the state of shape area
+    out << this->ui->Shapearea->shape() << "\n";
+    out << this->ui->Shapearea->scale() << "\n";
+    out << this->ui->Shapearea->length() << "\n";
+    out << this->ui->Shapearea->step_counter() << "\n";
+
+    /// Record/write the state of the save file
+    out << filePath << "\n";
+
+    /// StateFile is closed.
+    StateFile.close();
+}
+
+void MainWindow::on_selectSaveState_clicked()
+{
+    /// The user selects the location (path) of the state file to open.
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open State File"), "/home", tr("Text (*.txt)"));
+
+    /// StateFile is a QFile object to check if a state file has been created by the user.
+    QFile StateFile(fileName);
+
+    if (!StateFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        /// If no state file is selected, then this a message will pop up to warn the user.
+        QMessageBox::warning(this, "Warning!","No state file has been SELECTED!");
+        return;
+    }
+
+    /// The file path (location) of the state file is set.
+    filePath = fileName;
+
+    /// A QTextStream object called out is used to read from the selected state file.
+    QTextStream in(&StateFile);
+
+    /// A QString object called FileContent is used to hold all the lines that were read from the file.
+    QString line = in.readLine();
+
+    this->ui->Shapearea->setShapeFromSaveState(line.toInt());
+
+    line = in.readLine();
+    this->ui->Shapearea->set_scale_size(line.toFloat());
+
+    line = in.readLine();
+    this->ui->Shapearea->set_length_of_shape(line.toFloat());
+
+    line = in.readLine();
+    this->ui->Shapearea->set_step_counter(line.toInt());
+
+    line = in.readLine();
+    filePath = line;
+
+    /// SaveFile is closed.
+    StateFile.close();
+
+    this->ui->Shapearea->repaint();
+    update_UserInterface();
+
+    QFile copyFile(filePath);
+
+    if (!copyFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        ///Opens a message box stating that the selected file did not open properly and will return from function
+        QMessageBox::warning(this, "Warning!","File not open!");
+        return;
+    }
+
+    /// A QTextStream object called out is used to read from the selected save file.
+    QTextStream text(&copyFile);
+
+    /// A QString object called FileContent is used to hold all the lines that were read from the file.
+    QString FileContent = text.readAll();
+
+    /// Clear the Graphical Notepad in the main window
+    ui->textEdit->clear();
+
+    /// Add all the information from the selected file to Graphical Notepad in the main window
+    ui->textEdit->setPlainText(FileContent);
+}
