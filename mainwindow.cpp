@@ -572,14 +572,9 @@ void MainWindow::on_integralsButton_clicked()
 
     displayIntegrals5.setWindowTitle("Integrals Page Five");
     displayIntegrals5.setText("Integrals Page Five");
-
     displayIntegrals5.setIconPixmap(pm5);
     displayIntegrals5.icon();
-            displayIntegrals5.setBaseSize(1000,1000);
-
-
-    displayIntegrals5.setIconPixmap(pm);
-    displayIntegrals5.icon();
+    displayIntegrals5.setBaseSize(1000,1000);
 
     displayIntegrals5.exec();
 
