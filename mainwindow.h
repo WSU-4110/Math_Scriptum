@@ -80,6 +80,91 @@ private slots:
    void on_integralsButton_clicked();
 
 
+<<<<<<< Updated upstream
+=======
+   void on_background_color_button_clicked();
+
+   void on_line_color_button_clicked();
+
+
+   // Menu bar actions
+   // Save Control
+   void on_actionCreate_Save_File_triggered();
+
+   void on_actionSelect_Save_File_triggered();
+
+   void on_actionPaste_From_File_triggered();
+
+   void on_actionSave_Progress_triggered();
+
+   void on_actionSave_Image_triggered();
+
+   // Graph Controls
+   void on_actionl_x_triggered();
+
+   void on_actionSquare_Root_triggered();
+
+   void on_actionParabola_triggered();
+
+   void on_actionLine_triggered();
+
+   // Color Controls
+   void on_actionBackground_Color_triggered();
+
+   void on_actionLine_Color_triggered();
+
+   // Shape Controls
+   void on_actionCycloid_triggered();
+
+   void on_actionAstroid_triggered();
+
+   void on_actionCircle_triggered();
+
+   void on_actionEllipse_triggered();
+
+   void on_actionHexagon_triggered();
+
+   void on_actionHypo_triggered();
+
+   void on_actionHuygens_triggered();
+
+   void on_actionLines_triggered();
+
+   // Equation Controls
+   void on_actionLimits_triggered();
+
+   void on_actionDerivatives_triggered();
+
+   void on_actionIntegrals_triggered();
+
+
+   //void on_pushButton_clicked();
+
+   void on_shape10Button_clicked();
+
+   void on_shape11Button_clicked();
+
+   void on_shape12Button_clicked();
+
+   void on_pushButton_clicked();
+
+   void on_printButton_clicked();
+
+   void keyboardShortcuts();
+
+
+
+   void on_pushButton_3_clicked();
+
+   void on_openButton_clicked();
+
+   void on_createSaveState_clicked();
+
+   void on_pushButton_2_clicked();
+
+   void on_selectSaveState_clicked();
+
+>>>>>>> Stashed changes
 private:
     Ui::MainWindow *ui;
     QString filePath;

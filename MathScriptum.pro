@@ -30,6 +30,7 @@ SOURCES += \
     shapearea.cpp
 
 HEADERS += \
+    FlowLayout.h \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
@@ -42,3 +43,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    RegularLayoutForm.ui.qml

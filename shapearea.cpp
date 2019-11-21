@@ -61,8 +61,6 @@ QPointF ShapeArea::drawGeneral(float t)
     case General:
         return drawGeneral(t);
         break;
-
-
     default:
         break;
 
@@ -201,8 +199,11 @@ QPointF ShapeArea::drawEllipse(float t)
 
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 ///main function of the shape area class
 void ShapeArea::paintEvent(QPaintEvent *event)
 {
