@@ -35,6 +35,7 @@ SOURCES += \
 
 
 HEADERS += \
+    catch.hpp \
     equationsarea.h \
     mainwindow.h \
     notearea.h \
