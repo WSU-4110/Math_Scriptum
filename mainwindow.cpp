@@ -207,7 +207,7 @@ void MainWindow::on_saveImage_clicked()
     if (path.isEmpty())
     {
         /// If path is empty then this message will warn the user.
-        QMessageBox::warning(this, "Warning!","No save file location (path) created! Shape will not be saved!");
+        QMessageBox::warning(this, "Warning!","No file location (path) created! Shape will not be saved!");
         return;
     }
 
@@ -779,7 +779,7 @@ void MainWindow::on_selectSaveState_clicked()
     line = in.readLine();
     filePath = line;
 
-    /// SaveFile is closed.
+    /// StateFile is closed.
     StateFile.close();
 
     this->ui->Shapearea->repaint();
@@ -794,7 +794,7 @@ void MainWindow::on_selectSaveState_clicked()
         return;
     }
 
-    /// A QTextStream object called out is used to read from the selected save file.
+    /// A QTextStream object called out is used to read from the selected state file.
     QTextStream text(&copyFile);
 
     /// A QString object called FileContent is used to hold all the lines that were read from the file.

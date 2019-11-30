@@ -55,3 +55,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     images.qrc
+
+SUBDIRS += \
+    UnitTest/UnitTest.pro
