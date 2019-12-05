@@ -27,6 +27,7 @@ SOURCES += \
     equationsarea.cpp \
     main.cpp \
     mainwindow.cpp \
+    mathdefinitions.cpp \
     notearea.cpp \
     shapearea.cpp \
     shapewindow.cpp \
@@ -37,6 +38,7 @@ SOURCES += \
 HEADERS += \
     equationsarea.h \
     mainwindow.h \
+    mathdefinitions.h \
     notearea.h \
     shapearea.h \
     shapewindow.h \
