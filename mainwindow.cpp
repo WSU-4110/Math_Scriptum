@@ -720,7 +720,7 @@ void MainWindow::on_createSaveState_clicked()
 
     if (!StateFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
     {
-        /// If no state file is create, then this a message will pop up to warn the user.
+        /// If no state file is created, then this a message will pop up to warn the user.
         QMessageBox::warning(this, "Warning!","No state file has been CREATED! Until a state file is created or selected, nothing will be saved!");
         return;
     }
@@ -759,12 +759,13 @@ void MainWindow::on_selectSaveState_clicked()
         return;
     }
 
-    /// A QTextStream object called out is used to read from the selected state file.
+    /// A QTextStream object called in is used to read from the selected state file.
     QTextStream in(&StateFile);
 
-    /// A QString object called FileContent is used to hold all the lines that were read from the file.
+    /// A QString object called line is used to hold all the lines that were read from the file.
     QString line = in.readLine();
 
+    /// The following reads the state file contents and adjusts the UI settings accordingly
     this->ui->Shapearea->setShapeFromSaveState(line.toInt());
 
     line = in.readLine();
@@ -776,10 +777,11 @@ void MainWindow::on_selectSaveState_clicked()
     line = in.readLine();
     this->ui->Shapearea->set_step_counter(line.toInt());
 
+    /// This reads the save file location to open and read to UI.
     line = in.readLine();
     filePath = line;
 
-    /// SaveFile is closed.
+    /// StateFile is closed.
     StateFile.close();
 
     this->ui->Shapearea->repaint();
@@ -794,7 +796,7 @@ void MainWindow::on_selectSaveState_clicked()
         return;
     }
 
-    /// A QTextStream object called out is used to read from the selected save file.
+    /// A QTextStream object called text is used to read from the selected save file.
     QTextStream text(&copyFile);
 
     /// A QString object called FileContent is used to hold all the lines that were read from the file.
