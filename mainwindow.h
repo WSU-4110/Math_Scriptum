@@ -6,7 +6,7 @@
 #include <QListWidgetItem>
 
 #include "shapewindow.h"
-
+#include "mathdefinitions.h"
 #include "print.h"
 
 
