@@ -8,7 +8,6 @@ class NoteArea : public QWidget
     Q_OBJECT
 public:
     explicit NoteArea(QWidget *parent = nullptr);
-
 signals:
 
 public slots:

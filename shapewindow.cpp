@@ -13,6 +13,13 @@ ShapeWindow::~ShapeWindow()
 {
     delete ui;
 }
+/*
+ * The update user interface updates the shape with the new settings set by the user in real time (under 1 second load time)
+ * use head pointer "this" to call the ui
+ * call the setvalue which calls the shape area class and calls the stepper function
+ * call the setvalue which calls the shape area class and calls the scaler function
+ * call the setvalue which calls the shape area class and calls the length of shape function
+ * */
 
 void ShapeWindow::update_UserInterface()
 {
@@ -20,22 +27,32 @@ void ShapeWindow::update_UserInterface()
     this->ui->sScale->setValue(this->ui->Shapearea->scale());
     this->ui->sInterval->setValue(this->ui->Shapearea->length());
 }
-
+/*
+ * The following 3 functions are the functoions for the parametric equation settings,
+ * the scaler sets the scale of the shape
+ * the counter increments the shape movement
+ * the interval changes the shape depending on the user settings
+ * */
 void ShapeWindow::on_sCount_valueChanged(int arg1)
 {
     this->ui->Shapearea->set_step_counter(arg1);
 }
-
 void ShapeWindow::on_sInterval_valueChanged(double arg1)
 {
     this->ui->Shapearea->set_length_of_shape(arg1);
 }
-
 void ShapeWindow::on_sScale_valueChanged(double arg1)
 {
     this->ui->Shapearea->set_scale_size(arg1);
 }
 
+/*
+ * The following functions acheive the following
+ * call the shape area class
+ * call the set up shape which calls a shape declared in the shape area class
+ * call the the repaint function which displays upodated shape that was just declared
+ * call the update user interface function that updates the setting and displays the updated shape with the setting
+ * */
 
 void ShapeWindow::on_shape12Button_clicked()
 {
@@ -117,11 +134,8 @@ void ShapeWindow::on_astroid_Button_clicked()
 
 void ShapeWindow::on_CycloidButton_clicked()
 {
-    ///set up the shape call it from the shapearea class
     this->ui->Shapearea->set_up_Shape(ShapeArea::Cycloid);
-    ///repaint the area
     this->ui->Shapearea->repaint();
-    ///display the new shape
     update_UserInterface();
 
 }

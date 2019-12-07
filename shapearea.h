@@ -25,7 +25,7 @@ public:
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
     QSize sizeHint() const Q_DECL_OVERRIDE;
 
-
+    ///enumurate shapes to allow flexibilty of use
      enum shape_type
      {
          Line,
@@ -187,7 +187,6 @@ private:
    QPointF drawShape10(float t);
    QPointF drawShape11(float t);
    QPointF drawShape12(float t);
-
    void load_shape_change();
 
 
@@ -196,7 +195,6 @@ private:
    QColor background_color;
    ///set up the color of the shape
    QColor shape_color;
-
    QPen pen;
    shape_type Shape;
    float length_of_Interval;

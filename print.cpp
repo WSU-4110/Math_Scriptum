@@ -9,12 +9,10 @@
 
 print::print(QWidget *parent) : EquationsArea(parent)
 {
-
 }
 
 void print::printToPDF(QString text, QImage image)
 {
-
     ///Add new lines to the note area string some image of graph will be on its own line
     text = text + "\n\n";
 

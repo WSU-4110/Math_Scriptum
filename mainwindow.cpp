@@ -28,6 +28,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+///update user interface to whatever setting set by the user
+/// call ui to call the varibale
+/// variable calls the setter and function for that specific setting
 void MainWindow::update_UserInterface()
 {
     this->ui->sCount->setValue(this->ui->Shapearea->step_counter());
@@ -65,8 +68,6 @@ void MainWindow::on_CycloidButton_clicked()
     ///display the new shape
     update_UserInterface();
 }
-
-
 
 void MainWindow::on_selectSaveFileButton_clicked()
 {
@@ -222,6 +223,14 @@ void MainWindow::on_saveImage_clicked()
     img.save(path);
 }
 
+/*
+ * All actions done by user is defined in the functions below
+ * for every click there is a function
+ * if a shape is clicked, that shape will load
+ * if the setting is changed, update the shape
+ * if save setting is clicked, save as the user chooses
+ *
+ * */
 
 void MainWindow::on_circle_Button_clicked()
 {
@@ -470,7 +479,8 @@ void MainWindow::on_actionLine_triggered()
     on_lineButton_clicked();
 }
 
-// Color Controls
+///when the color button is triggered
+/// change the color
 void MainWindow::on_actionBackground_Color_triggered()
 {
     on_background_color_button_clicked();
@@ -480,8 +490,6 @@ void MainWindow::on_actionLine_Color_triggered()
 {
     on_line_color_button_clicked();
 }
-
-// Shapes
 
 void MainWindow::on_actionCycloid_triggered()
 {
