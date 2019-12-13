@@ -82,7 +82,7 @@ void test::test_Shape12()
 
     float x = (t1 - t2) * cos (t) + t3 * cos (t * ((t1 - t2) / t2));
     float y = (t1 - t2) * sin (t) - t3 * sin (t * ((t1 - t2) / t2));
-    QTRY_VERIFY2_WITH_TIMEOUT(x > sin(t),"SHOULD BE UNDER 4MS",5);
+    QTRY_VERIFY_WITH_TIMEOUT(x > sin(t),5);
 
 }
 
