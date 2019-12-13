@@ -1,5 +1,6 @@
 QT       += core gui
 QT       += printsupport
+QT       += gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
