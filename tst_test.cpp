@@ -1,6 +1,9 @@
 #include <QtTest>
 #include <QtTest/QtTest>
 #include <QLine>
+#include <math.h>
+///define PI using C++ math library
+#define M_PI  3.14159265358979323846
 
 // add necessary includes here
 
