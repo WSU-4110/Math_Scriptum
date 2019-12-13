@@ -21,12 +21,14 @@ private slots:
     void test_Shape11();
     void testHex();
     void testLines();
-	void test_case1();
+    
+    void test_case1();
     void test_case2();
     void test_case3();
     void test_case4();
     void test_case5();
-	void SaveImage();
+    
+    void SaveImage();
     void SaveImage_data();
     void SelectSaveFile();
     void SelectSaveFile_data();
@@ -36,6 +38,12 @@ private slots:
     void CreateSaveState_data();
     void selectSaveState();
     void selectSaveState_data();
+    
+    void drawAstroid();
+    void drawHypo();
+    void drawCircle();
+    void drawCycloid();
+    void drawHuygens();
 
 };
 
@@ -540,6 +548,73 @@ void test::selectSaveState_data()
     // The save file has some content.
     QTest::newRow("NOT Empty File") << "Hello.\nThis is to show that the file isn't empty."
                                     << "Hello.\nThis is to show that the file isn't empty.";
+}
+
+void test::drawAstroid()
+{
+    // check that values of x and y are always less than pi
+
+    float t = 10;
+    float pi = 3.14159;
+
+
+    float cos_t = cos(t);
+    float sin_t = sin(t);
+
+    float x = 2 * cos_t * cos_t * cos_t;
+    float y = 2 * sin_t * sin_t * sin_t;
+
+    QVERIFY2(pi > x && pi > y, "Pi should be geeater than both x & y in terms of sin and cos.");
+}
+
+void test::drawHypo()
+{
+    float t = 10;
+    float pi = 3.14159;
+
+    float x = 1.5 * (2*cos(t) + cos (2*t));
+    float y = 4 * (3*sin(t) - sin(3*t));
+
+    QVERIFY2(pi > x && pi > y, "Pi should be geeater than both x & y in terms of sin and cos.");
+
+}
+
+void test::drawCircle()
+{
+    float r = 10;
+    float pi = 3.14159;
+    float area = pi * pow(r,2);
+
+    float x = area / pi;
+    float i = sqrt(x);
+
+    QCOMPARE(r,i);
+}
+
+void test::drawCycloid()
+{
+    float t = 10;
+    float pi = 3.14159;
+
+    float x = 1.5 * (1-cos(t));
+    float y = 1.5 * (t-sin(t));
+
+    QVERIFY2(pi > x || pi < y, "Pi should be geeater than x & less than y in terms of sin and cos.");
+
+}
+
+void test::drawHuygens()
+{
+// 4*(3*cos(t)-cos(3*t)),4*(3*sin(t)-sin(3*t)));
+
+    float t = 10;
+    float pi = 3.14159;
+
+    float x = 4*(3*cos(t)-cos(3*t));
+    float y = 4*(3*sin(t)-sin(3*t));
+
+    QVERIFY2(pi < x || pi > y, "Pi should be less than x & greater than y in terms of sin and cos.");
+
 }
 
 QTEST_APPLESS_MAIN(test)
