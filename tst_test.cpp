@@ -97,7 +97,7 @@ void test::testLines()
     float x = (t1 - t2) * cos (t) + t3 * cos (t * ((t1 - t2) / t2));
     float y = (t1 - t2) * sin (t) - t3 * sin (t * ((t1 - t2) / t2));
 
-   QTRY_VERIFY2(PI < x || PI < y, "PI SHOULD BE SMALLER THEN X AN Y IN TERMS OF SIN AND COS");
+   QTRY_VERIFY(PI < x || PI < y);
 
 }
 
