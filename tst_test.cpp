@@ -65,10 +65,11 @@ void test::test_Shape11()
     float t = 0;
     float vertex = 15;
     float secondVertex = 4;
+    double num = 1;
 
     float x = vertex * cos (t) - secondVertex * cos (vertex / secondVertex * t);
     float y = vertex * sin (t) - secondVertex * sin (vertex / secondVertex * t);
-    QCOMPARE(1, cos(t));
+    QCOMPARE(num, cos(t));
 
 
 }
@@ -134,8 +135,9 @@ void test::test_case3()
 {
     float t = 9;
     float x = t;
+    float num = 3;
     float y = sqrt(x);
-    QCOMPARE(3,y);
+    QCOMPARE(num,y);
 }
 
 void test::test_case4()
